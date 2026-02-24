@@ -7,7 +7,15 @@ const navItems = [
   { href: '/faq', label: 'FAQ' },
 ];
 
-const currentPath = Astro.url.pathname;
+const normalizePath = (path: string) => {
+  if (path === '/') {
+    return path;
+  }
+
+  return path.replace(/\/+$/, '');
+};
+
+const currentPath = normalizePath(Astro.url.pathname);
 ---
 
 <header class="border-b border-slate-200">
@@ -15,7 +23,7 @@ const currentPath = Astro.url.pathname;
     <a href="/" class="text-xl font-semibold tracking-tight text-slate-900">Business Architekt</a>
     <nav aria-label="Hauptnavigation" class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600">
       {navItems.map((item) => {
-        const isActive = currentPath === item.href;
+        const isActive = currentPath === normalizePath(item.href);
         return (
           <a
             href={item.href}
