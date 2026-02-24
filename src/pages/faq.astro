@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    q: 'Für wen ist Business Architekt geeignet?',
+    a: 'Platzhaltertext: Kurzbeschreibung der typischen Rollen, Teamgrößen und Entscheidungssituationen.',
+  },
+  {
+    q: 'Wie lange dauert ein typischer Prozess?',
+    a: 'Platzhaltertext: Beispielhafter Zeitraum von Erstgespräch bis zum umsetzbaren Ergebnis.',
+  },
+  {
+    q: 'Wie unterscheidet sich das von klassischer Beratung?',
+    a: 'Platzhaltertext: Fokus auf Sparring, Entscheidungsfähigkeit und klare Verantwortungsgrenzen.',
+  },
+];
+---
+
+<BaseLayout title="FAQ">
+  <section class="mx-auto w-full max-w-4xl px-6 py-20 md:py-28">
+    <h1 class="text-4xl font-semibold tracking-tight md:text-5xl">FAQ</h1>
+    <p class="mt-6 text-lg leading-relaxed text-slate-600">
+      Platzhaltertext: Antworten auf häufige Fragen, kompakt und transparent formuliert.
+    </p>
+
+    <div class="mt-12 divide-y divide-slate-200 border-y border-slate-200">
+      {faqs.map((faq) => (
+        <article class="py-6">
+          <h2 class="text-xl font-semibold tracking-tight">{faq.q}</h2>
+          <p class="mt-3 text-slate-600">{faq.a}</p>
+        </article>
+      ))}
+    </div>
+
+    <a href="/" class="mt-10 inline-flex text-sm font-medium text-slate-900 underline underline-offset-4">
+      Zur Startseite
+    </a>
+  </section>
+</BaseLayout>
