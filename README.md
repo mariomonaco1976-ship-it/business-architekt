@@ -24,6 +24,47 @@ npm run build
 
 Der statische Output liegt danach im Ordner `dist/`.
 
+## Deployment auf Cloudflare (automatisch via GitHub)
+
+Jeder Push auf den `main`-Branch löst automatisch ein Deployment auf Cloudflare aus.  
+Der GitHub Actions Workflow liegt unter `.github/workflows/deploy.yml`.
+
+### Einmalige Einrichtung (nur einmal nötig)
+
+**1. Cloudflare API Token erstellen**
+
+- Cloudflare Dashboard → „My Profile" → „API Tokens" → „Create Token"
+- Template wählen: **„Edit Cloudflare Workers"**
+- Token kopieren
+
+**2. Cloudflare Account ID herausfinden**
+
+- Cloudflare Dashboard → rechte Spalte → „Account ID" kopieren
+
+**3. Secrets in GitHub hinterlegen**
+
+- GitHub Repository → Settings → Secrets and variables → Actions → „New repository secret"
+- `CLOUDFLARE_API_TOKEN` → deinen API Token einfügen
+- `CLOUDFLARE_ACCOUNT_ID` → deine Account ID einfügen
+
+**4. Ab sofort: Änderungen pushen = automatisch live**
+
+```bash
+git add .
+git commit -m "Meine Änderungen"
+git push
+```
+
+→ GitHub Actions baut die Seite und deployed sie automatisch auf Cloudflare.
+
+### Manuelles Deployment (alternativ, ohne GitHub Actions)
+
+```bash
+npm run deploy
+```
+
+Dafür muss `wrangler` lokal eingerichtet sein (`wrangler login`).
+
 ## Seitenstruktur
 
 - `/` Startseite
@@ -49,4 +90,35 @@ src/
     faq.astro
   styles/
     global.css
+public/
+  (hier Logo und Bilder ablegen, z. B. logo.svg, hero.jpg)
 ```
+
+---
+
+## ⚠️ Untersuchungsbericht: Verlust der Original-Texte, Visuals und Logo
+
+### Was ist passiert?
+
+Die eigenen Texte, das Logo und das Visual wurden **nie in Git eingecheckt (committed)** und sind daher aus der Versionsverwaltung nicht wiederherstellbar. Im folgenden ist der genaue Ablauf dokumentiert:
+
+| Datum | Commit / PR | Was passierte |
+|---|---|---|
+| 24. Feb. 2026 | PR #1 (Codex) – `5494879` | KI (Codex) erstellte die Astro-Website mit **Platzhaltertexten** (`Platzhaltertext: …`) in allen Seiten. Kein Logo, kein Visual. |
+| 24. Feb. 2026 | PR #2 (Codex) – `220fb75` | Kleine Fix-Commits (Navigation). Inhalte unverändert – weiterhin Platzhalter. |
+| 24. Feb. – 27. Feb. 2026 | **lokal in VS Code** | Der Nutzer bearbeitete die Dateien lokal und schrieb echte Inhalte (Texte, Logo, Visual) – diese wurden **nie mit `git add` / `git commit` gesichert** und nie zu GitHub gepusht. |
+| 27. Feb. 2026 | PR #3 (Copilot) – `0adc2bd` | Copilot wurde aufgefordert, die lokalen VS-Code-Inhalte einzupflegen. Da Copilot **keinen Zugriff auf lokale Dateien** hat (nur auf den Git-Stand), generierte es **eigene KI-Texte** als Ersatz für die Platzhalter. Logo und Visual wurden nicht hinzugefügt. |
+| 27. Feb. 2026 | Merge PR #3 – `2732b99` | Die KI-generierten Texte wurden in `main` gemerged. |
+
+### Warum konnten die Originaltexte nicht wiederhergestellt werden?
+
+Der letzte `git commit` vor der Bearbeitung in VS Code enthielt **ausschließlich Platzhaltertexte**. Die echten Inhalte existierten nur im lokalen Arbeitsverzeichnis und wurden nie gespeichert/eingecheckt. Git kann nur Inhalte sichern, die explizit mit `git add` und `git commit` erfasst wurden.
+
+### Empfehlung
+
+1. **Originaltexte**: Prüfe, ob die Dateien noch lokal auf deinem Rechner vorhanden sind (z. B. in VS Code unter `Datei > Zuletzt geöffnete Dateien` oder im lokalen Git-Ordner des Projekts). Ggf. auch Papierkorb oder Backup (Time Machine, iCloud, OneDrive) prüfen.
+2. **Logo**: Lege dein Logo-Bild als `public/logo.svg` (oder `.png`) ab. In `src/components/Header.astro` ist ein Kommentar hinterlegt, der zeigt, wie du das Logo einbindest.
+3. **Visual / Hero-Bild**: Lege dein Bild als `public/hero.jpg` (oder `.png`, `.webp`) ab und binde es in `src/pages/index.astro` ein – dort ist ebenfalls ein Kommentar als Anleitung eingefügt.
+4. **Texte eintragen**: Alle Seiten enthalten nun wieder `Platzhaltertext:` als Markierung. Ersetze diese durch deine eigenen Texte.
+5. **Zukünftig**: Nach jeder lokalen Bearbeitung `git add . && git commit -m "..." && git push` ausführen, damit Inhalte in Git gesichert sind.
+
