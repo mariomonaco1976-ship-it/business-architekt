@@ -24,6 +24,47 @@ npm run build
 
 Der statische Output liegt danach im Ordner `dist/`.
 
+## Deployment auf Cloudflare (automatisch via GitHub)
+
+Jeder Push auf den `main`-Branch löst automatisch ein Deployment auf Cloudflare aus.  
+Der GitHub Actions Workflow liegt unter `.github/workflows/deploy.yml`.
+
+### Einmalige Einrichtung (nur einmal nötig)
+
+**1. Cloudflare API Token erstellen**
+
+- Cloudflare Dashboard → „My Profile" → „API Tokens" → „Create Token"
+- Template wählen: **„Edit Cloudflare Workers"**
+- Token kopieren
+
+**2. Cloudflare Account ID herausfinden**
+
+- Cloudflare Dashboard → rechte Spalte → „Account ID" kopieren
+
+**3. Secrets in GitHub hinterlegen**
+
+- GitHub Repository → Settings → Secrets and variables → Actions → „New repository secret"
+- `CLOUDFLARE_API_TOKEN` → deinen API Token einfügen
+- `CLOUDFLARE_ACCOUNT_ID` → deine Account ID einfügen
+
+**4. Ab sofort: Änderungen pushen = automatisch live**
+
+```bash
+git add .
+git commit -m "Meine Änderungen"
+git push
+```
+
+→ GitHub Actions baut die Seite und deployed sie automatisch auf Cloudflare.
+
+### Manuelles Deployment (alternativ, ohne GitHub Actions)
+
+```bash
+npm run deploy
+```
+
+Dafür muss `wrangler` lokal eingerichtet sein (`wrangler login`).
+
 ## Seitenstruktur
 
 - `/` Startseite
