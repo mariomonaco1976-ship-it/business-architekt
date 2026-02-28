@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Business Architekt – Business-System-Fit</title>
+<link rel="icon" type="image/svg+xml" href="/ba_logo_baum.svg?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
@@ -117,6 +118,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
     padding-block: 1.1rem;
   }
   .logo {
@@ -137,6 +139,21 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem 1rem;
+    flex-wrap: wrap;
+  }
+  .header-nav a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: var(--primary);
+    opacity: 0.75;
+    white-space: nowrap;
+  }
+  .header-nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
   .nav-cta {
     display: inline-block;
     background: var(--primary);
@@ -146,7 +163,8 @@
     font-weight: 600;
     text-decoration: none;
     padding: 0.55rem 1.25rem;
-    border: 1px solid var(--primary);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
     transition: background 0.2s;
   }
   .nav-cta:hover { background: var(--primary-dark); color: #fff; }
@@ -262,7 +280,7 @@
     content: '—';
     position: absolute;
     left: 0;
-    color: var(--gold);
+    color: var(--signal);
     font-size: 0.75rem;
   }
 
@@ -296,7 +314,7 @@
     font-size: 0.95rem;
     color: #3a3830;
     line-height: 1.55;
-    max-width: 42ch;
+    max-width: 90%;
     margin-bottom: 1rem;
   }
   .number-source {
@@ -347,7 +365,27 @@
     color: #d4c86a;
     line-height: 1.3;
     z-index: 2;
+    cursor: pointer;
+    transition: all 0.35s ease;
   }
+  .orbit-center:hover {
+    width: 180px;
+    height: 180px;
+    background: rgba(16,7,70,0.95);
+    border-color: #d4c86a;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+  .orbit-center .center-main { transition: opacity 0.2s; }
+  .orbit-center:hover .center-main { opacity: 0; }
+  .orbit-center .center-hover {
+    position: absolute;
+    opacity: 0;
+    padding: 1.2rem;
+    transition: opacity 0.2s 0.15s;
+    font-weight: 400;
+  }
+  .orbit-center:hover .center-hover { opacity: 1; }
   .orbit-ring {
     position: absolute;
     top: 50%; left: 50%;
@@ -548,25 +586,6 @@
     margin-top: 2.5rem;
   }
 
-  /* Floating CTA */
-  .floating-cta {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    z-index: 200;
-    background: var(--primary);
-    color: #fff;
-    font-family: var(--font-body);
-    font-size: 0.88rem;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 0.75rem 1.4rem;
-    border: 1px solid var(--primary);
-    transition: background 0.2s, opacity 0.2s;
-    box-shadow: 0 4px 20px rgba(16,7,70,0.22);
-  }
-  .floating-cta:hover { background: var(--primary-dark); color: #fff; }
-
   /* ============================================================
      FOOTER
   ============================================================ */
@@ -625,9 +644,12 @@
     .orbit-card { width: 110px; font-size: 0.75rem; padding: 0.7rem 0.75rem; }
     .orbit-card:hover { width: 130px; }
     .orbit-center { width: 96px; height: 96px; font-size: 0.88rem; }
+    .orbit-center:hover { width: 145px; height: 145px; font-size: 0.72rem; }
   }
 
   @media (max-width: 640px) {
+    .header-inner { flex-direction: column; align-items: flex-start; }
+    .header-nav { justify-content: flex-start; }
     .hero-levers { grid-template-columns: 1fr; }
     .numbers-grid { grid-template-columns: 1fr; }
     .number-card:nth-child(n) { grid-column: span 1; }
@@ -636,8 +658,9 @@
     .orbit-card { width: 90px; font-size: 0.68rem; padding: 0.6rem; }
     .orbit-card:hover { width: 108px; }
     .orbit-center { width: 76px; height: 76px; font-size: 0.78rem; }
+    .orbit-center:hover { width: 120px; height: 120px; font-size: 0.62rem; }
+    .orbit-center .center-hover { padding: 0.8rem; }
     .footer-inner { flex-direction: column; }
-    .floating-cta { bottom: 1rem; right: 1rem; font-size: 0.82rem; }
   }
 </style>
 </head>
@@ -649,11 +672,16 @@
 <header class="site-header">
   <div class="container">
     <div class="header-inner">
-      <a href="#" class="logo">
-        Business Architekt
-        <span>Business-System-Fit</span>
+      <a href="/" class="logo">
+        <img src="/ba_logo_header.svg?v=2" alt="Business Architekt" style="height: 40px; width: auto;">
       </a>
-      <a href="#start" class="nav-cta">Klarheit gewinnen</a>
+      <nav class="header-nav" aria-label="Seitennavigation">
+        <a href="/so-funktioniert-es">Business-System-Fit</a>
+        <a href="/warum">Business Architekt</a>
+        <a href="/faq">FAQ</a>
+        <a href="/sparring">Sparring</a>
+      </nav>
+      <a href="https://bot.mariowittmer.de/business-system-fit-v-3-4-1-r2vcd4e" class="nav-cta" target="_blank" rel="noopener noreferrer">Dein nächster Schritt</a>
     </div>
   </div>
 </header>
@@ -712,17 +740,17 @@
 <section class="section">
   <div class="container">
     <p class="section-label">Drei Situationen</p>
-    <h2>In welcher Lage befindest du dich?</h2>
+    <h2>Wo stehst du gerade?</h2>
     <p class="section-intro">Dieselbe strukturelle Reibung zeigt sich auf unterschiedliche Weise – je nach Wachstumsphase und Ausgangslage.</p>
 
     <div class="symptom-grid">
       <div class="symptom-card">
-        <h3>Erfolgreich – aber dauerhaft unter Spannung</h3>
+        <h3>Erfolgreich – aber kostet zuviel</h3>
         <p class="desc">Umsatz und Kunden sind vorhanden. Doch Struktur, Arbeitsweise und Entscheidungen passen nicht mehr zusammen.</p>
         <ul>
           <li>Operative Belastung wächst trotz gutem Umsatz</li>
           <li>Entscheidungen fühlen sich zäh an</li>
-          <li>Das System arbeitet gegen dich, nicht für dich</li>
+          <li>Dein System arbeitet nicht für dich</li>
         </ul>
       </div>
       <div class="symptom-card">
@@ -756,7 +784,7 @@
   <div class="container">
     <p class="section-label">Empirische Einordnung</p>
     <h2>Das Muster ist selten Inkompetenz</h2>
-    <p class="section-intro">Strukturelle Reibung zwischen Unternehmer und System ist häufiger als angenommen – und messbar.</p>
+    <p class="section-intro">Strukturelle Reibung zwischen Unternehmer und System ist häufiger wahrnehmbar als angenommen – und messbar.</p>
 
     <div class="numbers-grid">
       <div class="number-card">
@@ -770,14 +798,14 @@
         <p class="number-source">Quelle: <a href="https://www.mynewsdesk.com/de/freelance-punkt-de/pressreleases/freelancer-studie-2025-mentale-belastung-nimmt-zu-projektlage-bleibt-angespannt-3387182" target="_blank">Freelancer Studie 2025</a></p>
       </div>
       <div class="number-card card-dark">
-        <div class="number-big">≈ 40 %</div>
-        <p>des erwarteten Werts strategischer Initiativen werden nie realisiert – häufig wegen Entscheidungen auf Basis unzureichender Grundlagen.</p>
-        <p class="number-source">Quelle: <a href="https://dataladder.com/wp-content/uploads/2019/07/Gartner-Study-40_of_the_anticipated_value_of_all_business_initiatives_is_never_achieved_due_to_poor_data_quality.pdf" target="_blank">Gartner</a></p>
-      </div>
-      <div class="number-card">
         <div class="number-big">3 Hebel</div>
         <p>Ein Unternehmen hat immer nur drei: Umsatz, Kosten, Entscheidungsqualität. Alles andere ist Symptom.</p>
         <p class="number-source">Strukturprinzip – Business Architekt</p>
+      </div>
+      <div class="number-card">
+        <div class="number-big">≈ 40 %</div>
+        <p>des erwarteten Werts strategischer Initiativen werden nie realisiert – häufig wegen Entscheidungen auf Basis unzureichender Grundlagen.</p>
+        <p class="number-source">Quelle: <a href="https://dataladder.com/wp-content/uploads/2019/07/Gartner-Study-40_of_the_anticipated_value_of_all_business_initiatives_is_never_achieved_due_to_poor_data_quality.pdf" target="_blank">Gartner</a></p>
       </div>
     </div>
   </div>
@@ -796,7 +824,10 @@
 
     <div class="orbit-wrapper">
       <div class="orbit-ring"></div>
-      <div class="orbit-center">DU<br><small style="font-size:0.65em;color:rgba(212,200,106,0.7);font-weight:400;">Zentrum</small></div>
+      <div class="orbit-center">
+        <span class="center-main">DU</span>
+        <span class="center-hover">Im Kopf des Unternehmers läuft die Struktur zusammen. Wenn du Reibung spürst, wirkt sich das auf alles andere aus.</span>
+      </div>
 
       <div class="orbit-card">
         <strong>Angebot</strong>
@@ -842,7 +873,7 @@
 <section class="section">
   <div class="container">
     <p class="section-label">Nach dem Business-System-Fit</p>
-    <h2>Was sich verändert</h2>
+    <h2>Perspektivwechsel</h2>
     <p class="section-intro">Kein Versprechen. Eine strukturelle Einordnung – und die Entscheidungsgrundlage, die daraus folgt.</p>
 
     <div class="result-grid">
@@ -855,7 +886,7 @@
         <p>Du erkennst, welche Spannungen wirklich strukturell bedingt sind – und wie du sie gezielt beseitigst.</p>
       </div>
       <div class="result-card">
-        <h3>Unterscheidungsfähigkeit</h3>
+        <h3>Performance</h3>
         <p>Du siehst den Unterschied zwischen Stabilisierung und Wachstum – und wann welche Maßnahme sinnvoll ist.</p>
       </div>
       <div class="result-card">
@@ -903,7 +934,7 @@
         <p class="price-label">Jetzt – bis Ende Q1 2026</p>
         <div class="price-tag">160 €</div>
         <h3>Evaluierungsphase</h3>
-        <p>Die Evaluierungsphase dient der strukturellen Feinkalibrierung von Anwendung, Darstellung und Report-Architektur. Dein Beitrag hilft, das Instrument zu schärfen.</p>
+        <p>Die Evaluierungsphase dient der strukturellen Feinkalibrierung von Anwendung, Darstellung und Report-Architektur.</p>
         <div class="checkmarks">
           <span class="checkmark-item">Kein Abo</span>
           <span class="checkmark-item">Keine Folgekosten</span>
@@ -936,10 +967,14 @@
       <p class="section-label">Bereit für Klarheit?</p>
       <h2>15–20 Minuten Selbstreflexion</h2>
       <p>Beantworte die strukturierten Fragen in deinem eigenen Tempo. Auf Wunsch folgt eine gemeinsame, individuelle Einordnung deiner Geschäftsrealität.</p>
-      <p>Du musst jetzt nichts optimieren. Du musst nur wissen, wo es reibt.</p>
+      <p>Du musst jetzt nichts optimieren. Du solltest nur wissen, welche Optionen dich wirklich tragen, damit sich dein Business rund anfühlt.</p>
 
       <div class="bot-placeholder">
-        [ Eingebetteter Bot – Platzhalter ]
+        <iframe
+          src="https://bot.mariowittmer.de/business-system-fit-v-3-4-1-r2vcd4e"
+          style="width: 100%; height: 780px; border: 0;"
+          loading="lazy"
+        ></iframe>
       </div>
     </div>
   </div>
@@ -951,18 +986,15 @@
 <footer class="site-footer">
   <div class="container">
     <div class="footer-inner">
-      <div class="footer-logo">Business Architekt</div>
+      <div class="footer-logo">© 2026 · Business Architekt</div>
       <nav class="footer-links">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
-        <a href="#">Kontakt</a>
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
+        <a href="/agb">AGB</a>
       </nav>
     </div>
   </div>
 </footer>
-
-<!-- Floating CTA -->
-<a href="#start" class="floating-cta">Business-System-Fit starten</a>
 
 </body>
 </html>
