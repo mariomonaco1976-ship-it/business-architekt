@@ -1,0 +1,312 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BusinessSystemFit from '../components/BusinessSystemFit.astro';
+---
+
+<BaseLayout title="Startseite">
+  <!-- HERO SECTION -->
+  <section class="mx-auto w-full max-w-6xl px-6 py-20 md:py-28">
+    <p class="text-sm uppercase tracking-[0.14em] text-slate-500">Business-System-Fit</p>
+    <h1 class="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+      Läuft's bei dir – und fühlt es sich auch so an?
+    </h1>
+
+    <p class="mt-4 max-w-2xl text-lg leading-relaxed text-slate-600">
+      Fast jedes Unternehmen hat am Ende eines von zwei sichtbaren Symptomen:<br>
+      <span style="display:inline-flex;align-items:center;"><span style="color:#FF5757;font-size:1.2em;">•</span>&nbsp;Zu wenig Einkommen</span><br>
+      <span style="display:inline-flex;align-items:center;"><span style="color:#FF5757;font-size:1.2em;">•</span>&nbsp;Zu hohe Kosten (Zeit, Geld, Energie)</span>
+    </p>
+    <p class="mt-2 max-w-2xl text-lg leading-relaxed text-slate-600">
+      Das sind die Symptome - nicht das eigentliche Problem.
+    </p>
+  </section>
+
+  <!-- ZAHLEN SEKTION -->
+  <!-- NEUE SEKTION: Drei Hebel -->
+  <section class="bg-slate-50 mx-auto w-full max-w-6xl px-6 py-16 md:py-20">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl font-semibold tracking-tight mb-6">Wenn wir sauber reduzieren:</h2>
+      <p class="text-lg text-slate-600 mb-4">Ein Unternehmen hat immer nur drei Hebel:</p>
+      <ul class="mb-6 text-lg text-slate-900">
+        <li class="flex gap-3">
+          <span class="mt-1" style="color: #97832C;">✓</span>
+          <span>Umsatz</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="mt-1" style="color: #97832C;">✓</span>
+          <span>Kosten</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="mt-1" style="color: #97832C;">✓</span>
+          <span>Entscheidungsqualität</span>
+        </li>
+      </ul>
+      <div class="mb-6 text-base text-slate-600">
+        <div class="mb-2">
+          <span class="font-semibold text-slate-900">Umsatz zu gering</span>
+          <span style="color:#FF5757; font-size:1.1em; margin:0 6px;">&rarr;</span>
+          Positionierung, Vertrieb, Marktmechanik
+        </div>
+        <div class="mb-2">
+          <span class="font-semibold text-slate-900">Kosten zu hoch</span>
+          <span style="color:#FF5757; font-size:1.1em; margin:0 6px;">&rarr;</span>
+          Struktur, Prozesse, Komplexität
+        </div>
+        <div class="mb-2">
+          <span class="font-semibold text-slate-900">Entscheidungen suboptimal</span>
+          <span style="color:#FF5757; font-size:1.1em; margin:0 6px;">&rarr;</span>
+          Denklogik, Priorisierung, Führung
+        </div>
+      </div>
+      <p class="mt-6 text-lg text-slate-600">In vielen Fällen ist weder Markt noch Kostenstruktur das Kernproblem.</p>
+      <p class="mt-2 text-lg text-slate-900">Sondern:<br>Die Geschäftsarchitektur passt nicht zur Denk- und Entscheidungslogik des Unternehmers.</p>
+    </div>
+  </section>
+  <section class="bg-white">
+    <div class="mx-auto w-full max-w-6xl px-6 py-20">
+      <h2 class="text-3xl font-semibold tracking-tight">Wie komme ich darauf?</h2>
+      
+      <div class="mt-12 grid gap-8 md:grid-cols-3">
+        <div>
+          <p class="text-4xl font-bold" style="color: #FF5757;">62%</p>
+          <p class="mt-2 text-slate-600">Aller Selbstständigen scheitern innerhalb der ersten fünf Jahre.</p>
+          <p class="mt-1 text-sm text-slate-500">
+            <a href="https://www.ifm-bonn.org/statistiken/gruendungen-und-unternehmensschliessungen/ueberlebensrate-von-unternehmen" target="_blank" rel="noopener noreferrer">(IfM Bonn)</a>
+          </p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold" style="color: #FF5757;">39%</p>
+          <p class="mt-2 text-slate-600">Freelancer empfinden ihr Stressniveau als hoch bis sehr hoch aufgrund von Faktoren wie unsicherer Auftragslage und finanzieller Unsicherheit.</p>
+          <p class="mt-1 text-sm text-slate-500">
+            <a href="https://www.mynewsdesk.com/de/freelance-punkt-de/pressreleases/freelancer-studie-2025-mentale-belastung-nimmt-zu-projektlage-bleibt-angespannt-3387182" target="_blank" rel="noopener noreferrer">(Freelancer Studie 2025)</a>
+          </p>
+        </div>
+        <div>
+          <p class="text-4xl font-bold" style="color: #FF5757;">≈40%</p>
+          <p class="mt-2 text-slate-600">des erwarteten Werts strategischer Initiativen werden nie realisiert – oft wegen schlechter Datenqualität.</p>
+          <p class="mt-1 text-sm text-slate-500">
+            <a href="https://dataladder.com/wp-content/uploads/2019/07/Gartner-Study-40_of-the-anticipated-value-of-all-business-initiatives-is-never-achieved-due-to-poor-data-quality.pdf" target="_blank" rel="noopener noreferrer">(Gartner)</a>
+          </p>
+        </div>
+      </div>
+      
+      <p class="mt-12 max-w-3xl text-lg text-slate-600">
+        Das Muster dahinter ist selten Inkompetenz. Es ist die <strong>strukturelle Reibung zwischen Unternehmer und System</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- WAS BEDEUTET DAS SECTION -->
+  <section class="bg-slate-50 py-16 md:py-20">
+    <div class="mx-auto w-full max-w-6xl px-6">
+      <h2 class="text-3xl font-semibold tracking-tight">Was bedeutet das?</h2>
+      <p class="mt-2 max-w-3xl text-lg text-slate-600">
+        Wenn Angebot, Entscheidungslogik, Arbeitsweise, Energiehaushalt und Marktanforderungen nicht sauber aufeinander abgestimmt sind, entsteht Reibung. Diese Reibung ist oft lange spürbar, bevor sie messbar wird.
+      </p>
+      <!-- Visual + Insight panel (component handles layout) -->
+      <div class="m-0">
+        <BusinessSystemFit />
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS-SYSTEM-FIT SECTION -->
+  <section class="border-t border-slate-200 bg-slate-50">
+    <div class="mx-auto w-full max-w-6xl px-6 py-20">
+      <h2 class="text-3xl font-semibold tracking-tight">Der Business-System-Fit</h2>
+      
+      <p class="mt-6 max-w-3xl text-lg text-slate-600">
+        Der Business-System-Fit ist eine strukturierte Einordnung der Wirkmechanik eines Geschäftsmodells.
+      </p>
+      
+      <p class="mt-6 max-w-3xl text-lg text-slate-600">
+        Er macht sichtbar:
+      </p>
+      
+      <ul class="mt-4 max-w-2xl space-y-3 text-slate-600">
+        <li class="flex gap-3">
+          <span class="mt-1" style="color: #97832C;">✓</span>
+          <span>Wo das System aktuell gegen den Unternehmer wirkt</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="mt-1" style="color: #97832C;">✓</span>
+          <span>Welche Spannungsfelder strukturell sind</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="mt-1" style="color: #97832C;">✓</span>
+          <span>Welche Wechselwirkungen Energie, Zeit oder Geld kosten</span>
+        </li>
+      </ul>
+      
+      <p class="mt-8 max-w-3xl text-lg text-slate-600">
+        Und vor allem: <strong>ob das Geschäftsmodell langfristig tragfähig gebaut ist.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ERGEBNISSE SECTION -->
+  <section class="mx-auto w-full max-w-6xl px-6 py-20">
+    <h2 class="text-3xl font-semibold tracking-tight">Was hat sich nach dem Business-System-Fit verändert?</h2>
+    
+    <div class="mt-12 grid gap-8 md:grid-cols-2">
+      <div class="rounded-lg border border-slate-200 p-6">
+        <div class="flex h-12 w-12 items-center justify-center rounded-lg font-semibold" style="background-color: #97832C; color: #100746;">1</div>
+        <h3 class="mt-4 text-xl font-semibold">Klare Priorisierung</h3>
+        <p class="mt-2 text-slate-600">Du weißt, was jetzt Vorrang hat – und hast dafür eine saubere Entscheidungsgrundlage.</p>
+      </div>
+      
+      <div class="rounded-lg border border-slate-200 p-6">
+        <div class="flex h-12 w-12 items-center justify-center rounded-lg font-semibold" style="background-color: #97832C; color: #100746;">2</div>
+        <h3 class="mt-4 text-xl font-semibold">Strukturelle Klarheit</h3>
+        <p class="mt-2 text-slate-600">Du erkennst, welche Spannung wirklich strukturell ist – und wie du sie beseitigst.</p>
+      </div>
+      
+      <div class="rounded-lg border border-slate-200 p-6">
+        <div class="flex h-12 w-12 items-center justify-center rounded-lg font-semibold" style="background-color: #97832C; color: #100746;">3</div>
+        <h3 class="mt-4 text-xl font-semibold">Unterscheidung</h3>
+        <p class="mt-2 text-slate-600">Du siehst den Unterschied zwischen Stabilisierung und Wachstum.</p>
+      </div>
+      
+      <div class="rounded-lg border border-slate-200 p-6">
+        <div class="flex h-12 w-12 items-center justify-center rounded-lg font-semibold" style="background-color: #97832C; color: #100746;">4</div>
+        <h3 class="mt-4 text-xl font-semibold">Sichere Entscheidungen</h3>
+        <p class="mt-2 text-slate-600">Du triffst Entscheidungen mit weniger Risiko und weniger Korrekturschleifen.</p>
+      </div>
+    </div>
+    
+    <div class="mt-12 rounded-lg border border-slate-900 bg-slate-900 p-8 text-white">
+      <p class="text-sm uppercase tracking-widest">Dein Hauptnutzen</p>
+      <p class="mt-4 text-2xl font-semibold">
+        Du weißt, welche Strukturen, Systeme und Tools dich und dein Geschäftsmodell langfristig tragen.
+      </p>
+    </div>
+  </section>
+
+  <!-- KONSEQUENZEN SECTION -->
+  <section class="border-t border-slate-200 bg-slate-50">
+    <div class="mx-auto w-full max-w-6xl px-6 py-20">
+      <h2 class="text-3xl font-semibold tracking-tight">Die Konsequenz</h2>
+      
+      <div class="mt-12 grid gap-8 md:grid-cols-2">
+        <div>
+          <h3 class="font-semibold text-slate-600">Statt:</h3>
+          <ul class="mt-4 space-y-2 text-slate-600">
+            <li class="flex gap-2">
+              <span style="color: #FF5757;">✗</span> Daueranspannung
+            </li>
+            <li class="flex gap-2">
+              <span style="color: #FF5757;">✗</span> Teurer Korrekturschleifen
+            </li>
+            <li class="flex gap-2">
+              <span style="color: #FF5757;">✗</span> Entscheidungsstau
+            </li>
+            <li class="flex gap-2">
+              <span style="color: #FF5757;">✗</span> Mentaler Erschöpfung
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-semibold text-slate-900">entsteht:</h3>
+          <ul class="mt-4 space-y-2 text-slate-900">
+            <li class="flex gap-2">
+              <span style="color: #97832C;">✓</span> <strong>Tragfähige Entscheidungsarchitektur</strong>
+            </li>
+            <li class="flex gap-2">
+              <span style="color: #97832C;">✓</span> <strong>Sauberer Ressourceneinsatz</strong>
+            </li>
+            <li class="flex gap-2">
+              <span style="color: #97832C;">✓</span> <strong>Stimmiges Wachstum</strong>
+            </li>
+            <li class="flex gap-2">
+              <span style="color: #97832C;">✓</span> <strong>Unternehmerische Ruhe</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVALUIERUNGSPHASE SECTION -->
+  <section class="mx-auto w-full max-w-6xl px-6 py-20">
+    <h2 class="text-3xl font-semibold tracking-tight">Evaluierungsphase Q1 2026</h2>
+    
+    <p class="mt-6 max-w-3xl text-lg text-slate-600">
+      Der Business-System-Fit geht im ersten Quartal 2026 in eine strukturierte Evaluierungsphase.
+    </p>
+    
+    <div class="mt-8 grid gap-6 md:grid-cols-2">
+      <div class="rounded-lg border border-slate-200 bg-blue-50 p-6">
+        <p class="text-2xl font-bold text-slate-900">160 €</p>
+        <p class="mt-2 text-slate-600"><strong>Evaluierungsphase</strong> (bis Ende Q1 2026)</p>
+      </div>
+      
+      <div class="rounded-lg border border-slate-200 p-6">
+        <p class="text-2xl font-bold text-slate-900">250 €</p>
+        <p class="mt-2 text-slate-600"><strong>Regulärer Preis</strong> (ab Q2 2026)</p>
+      </div>
+    </div>
+    
+    <p class="mt-8 max-w-3xl text-slate-600">
+      Die Evaluierungsphase dient der strukturellen Feinkalibrierung von Anwendung, Darstellung und Report-Architektur.
+    </p>
+    
+    <p class="mt-4 max-w-3xl text-slate-600">
+      <strong>Haltung:</strong> Klarheit soll bezahlbar sein. Deshalb ist der Einstieg bewusst niedrigschwellig – ohne Leistungsversprechen, ohne Upsell-Druck.
+    </p>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="border-t border-slate-200 bg-slate-900 text-white" id="get-started">
+    <div class="mx-auto w-full max-w-6xl px-6 py-20">
+      <h2 class="text-3xl font-semibold">Bereit für Klarheit?</h2>
+      
+      <p class="mt-6 max-w-2xl text-lg">
+        15–20 Minuten Selbstreflexion – und auf Wunsch eine gemeinsame, individuelle Einordnung deiner Geschäftsrealität.
+      </p>
+      
+      <!-- Typebot Inline-Embed -->
+      <div class="typebot-embed mt-8">
+        <iframe
+          src="https://bot.mariowittmer.de/business-system-fit-v-3-4-1-r2vcd4e"
+          title="Business-System-Fit Fragebogen"
+          allow="clipboard-write"
+        ></iframe>
+      </div>
+      <style>
+        .typebot-embed {
+          width: 100%;
+          max-width: 960px;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 16px;
+          border: 1px solid var(--system-line, #E6E4DC);
+          background: #fff;
+          overflow: hidden;
+        }
+        .typebot-embed iframe {
+          display: block;
+          width: 100%;
+          min-height: 820px;
+          height: 820px;
+          border: none;
+          background: #fff;
+        }
+        @media (max-width: 900px) {
+          .typebot-embed { max-width: 100vw; }
+        }
+        @media (max-width: 640px) {
+          .typebot-embed iframe {
+            min-height: 720px;
+            height: 85vh;
+            max-height: 85vh;
+          }
+        }
+      </style>
+      
+      <p class="mt-6 text-sm text-slate-300">
+        ✓ Kein Abo &nbsp;&nbsp;&nbsp; ✓ Keine Folgekosten &nbsp;&nbsp;&nbsp; ✓ Klare Einordnung
+      </p>
+    </div>
+  </section>
+</BaseLayout>

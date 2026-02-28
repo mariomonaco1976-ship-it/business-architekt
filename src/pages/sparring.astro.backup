@@ -1,0 +1,113 @@
+---
+import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
+---
+
+<PremiumSubpageLayout title="Sparring">
+  <section class="hero section">
+    <div class="container">
+      <h1>Sparring – Umsetzungsbegleitung</h1>
+      <p class="hero-intro">
+        Der Business-System-Fit stellt Klarheit her. <strong>Sparring überführt diese Klarheit unter
+        Alltagsbedingungen in einen stabilen Umsetzungstakt</strong> – damit Klarheit im Alltag stabil bleibt.
+      </p>
+    </div>
+  </section>
+
+  <hr class="divider-line" />
+
+  <section class="section">
+    <div class="container">
+      <div class="content-cards-grid">
+        <!-- Card 1: Was nach dem Business-System-Fit -->
+        <div class="content-card">
+      <p><strong>1. Du erkennst: So wie es ist, geht es nicht weiter.</strong></p>
+      <p>Dann ist ein geordneter Stopp oder ein klarer Kurswechsel die richtige Entscheidung.</p>
+      <p><strong>2. Du weißt, was zu tun ist.</strong></p>
+      <p>Dann geht es um Reihenfolge, Umsetzung und das Entfernen von Reibung.</p>
+      <p><strong>3. Du setzt gemischt um.</strong></p>
+      <p>
+        Ein Teil DIY (mit eigenem Wissen oder KI), ein Teil mit Spezialisten. Dann geht es um saubere Schnittstellen
+        und klare Briefings.
+      </p>
+      <p><strong>Sparring ist der logische Anschluss:</strong> Klarheit ohne Anschluss ist unvollständig.</p>
+
+      <h2>Worum es im Sparring geht</h2>
+      <ul>
+        <li>Entscheidungen im Alltag stabil halten</li>
+        <li>Reihenfolge sichern</li>
+        <li>Umsetzung führen, ohne Aktionismus</li>
+        <li>Spezialisten nur dann einsetzen, wenn es strukturell sinnvoll ist</li>
+      </ul>
+
+      <h2>Rahmen</h2>
+      <p>6 Wochen, 3 Termine à 60 Minuten</p>
+      <ul>
+        <li><strong>3 × 60 Minuten</strong> Termine</li>
+        <li><strong>Asynchrone Begleitung</strong> zwischen den Terminen (Discord)</li>
+        <li>
+          Ein stabiler <strong>6‑Wochen‑Umsetzungsrahmen</strong> als Arbeitsbasis (inkl. „Nicht jetzt“-Liste)
+        </li>
+        <li>
+          Ein klarer <strong>Abschluss:</strong> Das Modul endet. Eine Fortsetzung passiert nur, wenn ein neues Thema
+          entsteht oder die Umsetzung bewusst verlängert werden soll.
+        </li>
+      </ul>
+
+      <h2>Wie läuft das Sparring ab?</h2>
+      <ol>
+        <li><strong>Voraussetzung:</strong> Business-System-Fit ist abgeschlossen</li>
+        <li><strong>Termin 1 – Start (60 Min):</strong> Ziel, Fokus, Reihenfolge, erste Entscheidungen</li>
+        <li>
+          <strong>Termin 2 – Umsetzung (60 Min):</strong> Umsetzung stabilisieren, Schnittstellen klären, ggf.
+          Spezialisten einordnen
+        </li>
+        <li>
+          <strong>Termin 3 – Abschluss (60 Min):</strong> Ergebnis verdichten, offene Punkte sortieren, bewusste
+          Entscheidung: Ende oder Verlängerung
+        </li>
+        <li>
+          <strong>Asynchroner Austausch:</strong> Discord. Kurze Inputs, klare Rückfragen, Feedback als Grundlage für
+          den nächsten Termin.
+        </li>
+      </ol>
+
+      <h2>Preis</h2>
+      <p>Das Sparring-Modul geht im ersten Quartal 2026 in eine strukturierte Evaluierungsphase.</p>
+      <p><strong>690 €</strong></p>
+      <p><strong>Evaluierungsphase</strong> (bis Ende Q1 2026)</p>
+      <p><strong>750 €</strong></p>
+      <p><strong>Regulärer Preis</strong> (ab Q2 2026)</p>
+      <p>
+        Die Evaluierungsphase dient der strukturellen Feinkalibrierung von Ablauf, Darstellung und
+        Begleitungs-Architektur.
+      </p>
+      <p>
+        <strong>Haltung:</strong> Klarheit und Umsetzung sollen bezahlbar bleiben. Deshalb ist der Einstieg bewusst
+        niedrigschwellig – ohne Leistungsversprechen, ohne Upsell-Druck.
+      </p>
+
+      <h2>Spezialisten</h2>
+      <p>
+        Wenn im Sparring sichtbar wird, dass ein Thema Spezial-Know-how braucht (z. B. Recht, Steuer, Design,
+        Entwicklung, Tracking), dann:
+      </p>
+      <ul>
+        <li>klären wir <strong>ob</strong> es wirklich nötig ist,</li>
+        <li>definieren <strong>Ziel und Rahmen</strong>,</li>
+        <li>und du entscheidest, ob du beauftragst.</li>
+      </ul>
+      <p>
+        Die Leistung der Spezialisten ist <strong>nicht</strong> Bestandteil des Sparrings und wird separat beauftragt.
+      </p>
+
+      <h2>Bereit für Umsetzung?</h2>
+      <p>Der Business-System-Fit ist die Grundlage. Sparring ist der Anschluss für stabile Umsetzung.</p>
+      <p>Ich freue mich darauf, dich kennenzulernen.</p>
+      <div class="checkmarks">
+        <span>Kein Abo</span>
+        <span>Keine Folgekosten</span>
+        <span>Klare Einordnung</span>
+      </div>
+    </div>
+  </section>
+</PremiumSubpageLayout>

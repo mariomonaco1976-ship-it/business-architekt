@@ -1,27 +1,169 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
 ---
 
-<BaseLayout title="Warum Business Architekt">
-  <section class="mx-auto w-full max-w-4xl px-6 py-20 md:py-28">
-    <h1 class="text-4xl font-semibold tracking-tight md:text-5xl">Warum Business Architekt</h1>
-    <p class="mt-6 text-lg leading-relaxed text-slate-600">
-      Business Architekt richtet sich an Führungskräfte, Gründerinnen und Entscheider, die in komplexen Situationen
-      strukturiert vorankommen wollen – ohne Berater-Overhead, aber mit dem entscheidenden Blick von außen.
-    </p>
-  </section>
+<PremiumSubpageLayout title="Warum Business Architekt">
+  <section class="hero section">
+    <div class="container">
+      <div class="intro-grid">
+        <!-- Left: Text Card -->
+        <div class="content-card intro-card">
+          <h1>Der Business Architekt</h1>
+          <p>[Mario Wittmer]</p>
+          <p class="hero-intro">
+            Wenn Geschäftsstruktur und Denklogik auseinanderlaufen, wird es teuer. Nicht immer in Geld – oft in Fokus und
+            Entscheidungsfähigkeit. Das ist dein Signal: <em>Hier passt etwas nicht zusammen.</em>
+          </p>
+          <p class="hero-intro">
+            Ich arbeite an Passung. An der Kohärenz zwischen Denklogik, Rolle, Struktur und Entscheidung.
+          </p>
+          <h3>Mein Kontext</h3>
+          <p>
+            Über zwei Jahrzehnte operative und strategische Vertriebsverantwortung, Kommunikationsarbeit, digitale
+            Geschäftsprozess- und Automatisierungsstrukturen.
+          </p>
+          <p>Erfahrung in Markt, Druck und Realität.</p>
+        </div>
 
-  <section class="border-t border-slate-200">
-    <div class="mx-auto w-full max-w-4xl px-6 py-16">
-      <h2 class="text-2xl font-semibold tracking-tight">Typische Ausgangslagen</h2>
-      <p class="mt-4 text-slate-600">
-        Entscheidungen stehen an, aber die Grundlage ist unklar. Mehrere Optionen liegen auf dem Tisch, doch die
-        Priorisierung fehlt. Teams arbeiten engagiert – in unterschiedliche Richtungen. Der nächste Schritt scheint
-        klar, aber die Umsetzung stockt. Diese Situationen kennt Business Architekt – und schafft darin Orientierung.
-      </p>
-      <a href="/faq" class="mt-6 inline-flex text-sm font-medium text-slate-900 underline underline-offset-4">
-        Fragen klären
-      </a>
+        <!-- Right: Portrait -->
+        <div class="intro-portrait">
+          <img src="/ba_portrait.svg?v=2" alt="Mario Wittmer – Business Architekt">
+        </div>
+      </div>
     </div>
   </section>
-</BaseLayout>
+
+  <hr class="divider-line" />
+
+  <section class="section">
+    <div class="container">
+      <div class="content-cards-grid">
+        <!-- Card 1: Worum es mir wirklich geht (Blue) -->
+        <div class="content-card card-highlight">
+          <h2>Worum es mir wirklich geht</h2>
+          <p>Unternehmen sind kein technisches Konstrukt.</p>
+          <p>Sie sind Ausdruck der inneren Haltung und Denklogik ihres Unternehmers.</p>
+          <p>Wenn diese Ebenen nicht harmonieren,</p>
+          <p>entsteht Reibung – selbst bei wirtschaftlichem Erfolg.</p>
+          <p>Mir geht es um Kohärenz.</p>
+          <p>Darum, dass Geschäftsarchitektur, Marktauftritt und Entscheidungslogik mit der inneren Struktur des Unternehmers übereinstimmen.</p>
+          <p>Nicht nur damit es sich leichter anfühlt - sondern damit Erfolg langfristig tragfähig ist.</p>
+        </div>
+
+        <!-- Card 2: Was ich einbringe (White) -->
+        <div class="content-card">
+          <h2>Was ich einbringe</h2>
+          <p>Ich kenne Markt.</p>
+          <p>Ich kenne Vertrieb.</p>
+          <p>Ich kenne Marketing.</p>
+          <p>Ich kenne Systeme, Prozesse, Automatisierung.</p>
+          <p>Und ich kenne die Realität, die entsteht, wenn Komplexität wächst.</p>
+          <p>Meine Erfahrung ist Kontext, um deine Komplexität einzuordnen:</p>
+          <ul>
+            <li>Was ist gerade wirklich relevant.</li>
+            <li>Was ist nur Lärm.</li>
+            <li>Und welche Entscheidung trägt – nicht nur heute, sondern auch in zwölf Monaten.</li>
+          </ul>
+        </div>
+
+        <!-- Card 3: Sparring auf Augenhöhe (White) -->
+        <div class="content-card">
+          <h2>Sparring auf Augenhöhe</h2>
+          <p>Ich arbeite atypisch.</p>
+          <p>Ich arbeite kontextsensibel.</p>
+          <p>Ich bringe Struktur.</p>
+          <p>Du bringst Verantwortung.</p>
+          <p>
+            Klarheit ist der Anfang.
+          </p>
+          <p>Auf Wunsch begleiten wir den Weg von der Architektur in die Umsetzung – strukturiert, fokussiert und wirksam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(1.5rem, 3vw, 2.5rem);
+      align-items: start;
+    }
+
+    .intro-card {
+      padding-top: clamp(1.75rem, 4vw, 2.5rem);
+      padding-bottom: clamp(1.75rem, 4vw, 2.5rem);
+      padding-left: clamp(2.25rem, 5vw, 3.5rem);
+      padding-right: clamp(2.25rem, 5vw, 3.5rem);
+    }
+
+    .intro-card h1 {
+      margin-top: 0;
+    }
+
+    .intro-card h3 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .intro-portrait {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .intro-portrait img {
+      width: 70%;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .content-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: clamp(1.5rem, 3vw, 2.5rem);
+      margin-top: 2rem;
+    }
+
+    .card-highlight {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #F7F6F2;
+    }
+
+    .card-highlight h2 {
+      color: #F7F6F2;
+    }
+
+    .card-highlight p {
+      color: #b8b5d0;
+    }
+
+    .card-highlight ul {
+      color: #b8b5d0;
+    }
+
+    .card-highlight li {
+      color: #b8b5d0;
+    }
+
+    :global(.content-card) {
+      border-radius: 8px;
+      padding-left: clamp(2.25rem, 5vw, 3.5rem) !important;
+      padding-right: clamp(2.25rem, 5vw, 3.5rem) !important;
+    }
+
+    @media (max-width: 900px) {
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .content-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</PremiumSubpageLayout>

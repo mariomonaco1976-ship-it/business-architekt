@@ -1,0 +1,94 @@
+---
+import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
+---
+
+<PremiumSubpageLayout title="Impressum">
+  <section class="hero section">
+    <div class="container">
+      <h1 style="padding-left: clamp(2.25rem, 5vw, 3.5rem);">Impressum</h1>
+    </div>
+  </section>
+
+  <hr class="divider-line" />
+
+  <section class="section">
+    <div class="container">
+      <div class="content-cards-grid">
+        <div class="content-card">
+          <h3>Angaben gemäß § 5 TMG</h3>
+          <p>Mario Wittmer (Business Architekt)</p>
+          <p>c/o Baumgartner</p>
+          <p>Kurbelwiesgasse 3</p>
+          <p>80939 München</p>
+          <p>Deutschland</p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>Kontakt</h3>
+          <p>E-Mail: <a href="mailto:kontakt@mariowittmer.de">kontakt@mariowittmer.de</a></p>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>Rechtsform</h3>
+          <p>Einzelunternehmer (Kleinunternehmer)</p>
+        </div>
+
+        <div class="content-card">
+          <h3>Umsatzsteuer</h3>
+          <p>Als Kleinunternehmer im Sinne von § 19 UStG wird keine Umsatzsteuer berechnet und ausgewiesen.</p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+          <p>Mario Wittmer</p>
+          <p>c/o Baumgartner</p>
+          <p>Kurbelwiesgasse 3</p>
+          <p>80939 München</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .content-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(1.5rem, 3vw, 2.5rem);
+      margin-top: 2rem;
+    }
+
+    :global(.content-card) {
+      border-radius: 8px;
+      padding-left: clamp(2.25rem, 5vw, 3.5rem) !important;
+      padding-right: clamp(2.25rem, 5vw, 3.5rem) !important;
+    }
+
+    .card-dark {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #F7F6F2;
+    }
+
+    .card-dark h3 {
+      color: #F7F6F2;
+    }
+
+    .card-dark p,
+    .card-dark ul,
+    .card-dark ol,
+    .card-dark li {
+      color: #b8b5d0;
+    }
+
+    .card-cta {
+      background: linear-gradient(135deg, rgba(16, 7, 70, 0.08) 0%, rgba(151, 131, 44, 0.06) 100%);
+      border-color: var(--divider);
+    }
+
+    @media (max-width: 900px) {
+      .content-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</PremiumSubpageLayout>

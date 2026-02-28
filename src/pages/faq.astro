@@ -1,40 +1,211 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-
-const faqs = [
-  {
-    q: 'Für wen ist Business Architekt geeignet?',
-    a: 'Business Architekt richtet sich an Führungskräfte und Gründerinnen in mittleren und größeren Unternehmen, die in komplexen, oft unklaren Entscheidungssituationen strukturiert vorankommen wollen – allein oder mit einem kleinen Führungsteam.',
-  },
-  {
-    q: 'Wie lange dauert ein typischer Prozess?',
-    a: 'Ein erster Orientierungsrahmen entsteht typischerweise in einem bis zwei Gesprächen. Komplexere Vorhaben werden in mehreren Sitzungen über vier bis acht Wochen begleitet – abhängig von Situation, Tempo und verfügbarer Zeit.',
-  },
-  {
-    q: 'Wie unterscheidet sich das von klassischer Beratung?',
-    a: 'Business Architekt liefert keine fertige Lösung und kein Umsetzungsteam. Stattdessen schärft der Prozess die Entscheidungsfähigkeit der Führungskraft selbst – durch Struktur, Reflexion und klare nächste Schritte. Die Verantwortung bleibt, wo sie hingehört: bei Ihnen.',
-  },
-];
+import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
 ---
 
-<BaseLayout title="FAQ">
-  <section class="mx-auto w-full max-w-4xl px-6 py-20 md:py-28">
-    <h1 class="text-4xl font-semibold tracking-tight md:text-5xl">FAQ</h1>
-    <p class="mt-6 text-lg leading-relaxed text-slate-600">
-      Antworten auf häufige Fragen zu Zielgruppe, Ablauf und dem Unterschied zur klassischen Unternehmensberatung.
-    </p>
-
-    <div class="mt-12 divide-y divide-slate-200 border-y border-slate-200">
-      {faqs.map((faq) => (
-        <article class="py-6">
-          <h2 class="text-xl font-semibold tracking-tight">{faq.q}</h2>
-          <p class="mt-3 text-slate-600">{faq.a}</p>
-        </article>
-      ))}
+<PremiumSubpageLayout title="FAQ">
+  <section class="hero section">
+    <div class="container">
+      <h1 style="padding-left: clamp(2.25rem, 5vw, 3.5rem);">FAQ</h1>
+      <p class="hero-intro" style="padding-left: clamp(2.25rem, 5vw, 3.5rem);">Häufige Fragen zum Business-System-Fit</p>
     </div>
-
-    <a href="/" class="mt-10 inline-flex text-sm font-medium text-slate-900 underline underline-offset-4">
-      Zur Startseite
-    </a>
   </section>
-</BaseLayout>
+
+  <hr class="divider-line" />
+
+  <section class="section">
+    <div class="container">
+      <div class="content-cards-grid">
+        <div class="content-card">
+          <h3>Was ist der Business-System-Fit in einem Satz?</h3>
+          <p>
+            Der Business-System-Fit ist ein kurzer, klarer Prozess, der dein Gefühl in eine betriebswirtschaftlich
+            tragfähige Entscheidungsgrundlage übersetzt.
+          </p>
+          <p>Nicht durch „mehr tun“.</p>
+          <p>
+            Sondern durch Einordnung: Was wirkt gerade wie, warum ist das so, und was ist die sinnvollste nächste
+            Entscheidung.
+          </p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>Für wen ist das besonders hilfreich?</h3>
+          <p>Für Selbstständige und kleine Unternehmen, bei denen mindestens eins davon zutrifft:</p>
+          <ul>
+            <li>Es läuft grundsätzlich, aber es fühlt sich dauerhaft nach Druck an.</li>
+            <li>Es gibt ein Angebot, aber es kommen zu wenige (oder die falschen) Interessenten.</li>
+            <li>Entscheidungen ziehen sich, weil zu viele Optionen gleichzeitig offen sind.</li>
+            <li>Es gibt viel Aktivität, aber zu wenig Ergebnis.</li>
+            <li>Tools und Prozesse sind da, aber sie machen es eher schwerer als leichter.</li>
+          </ul>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>Wie ist der Ablauf Schritt für Schritt?</h3>
+          <p>Der Business-System-Fit hat einen klaren Weg:</p>
+          <ol>
+            <li><strong>Fragen (15–20 Minuten):</strong> Du gehst durch eine strukturierte Selbstreflexion.</li>
+            <li><strong>Termin:</strong> Danach legst du den Termin für dein Einordnungsgespräch fest.</li>
+            <li><strong>Einordnungsgespräch:</strong> Wir verdichten deine Situation zu einem sauberen Entscheidungsrahmen.</li>
+            <li><strong>Report:</strong> Du bekommst das Ergebnis danach dokumentiert.</li>
+          </ol>
+          <p>Das ist bewusst linear.</p>
+          <p>So bleibt es ruhig und klar.</p>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>Wie lange dauert das insgesamt?</h3>
+          <ul>
+            <li><strong>Fragen:</strong> ca. 15–20 Minuten</li>
+            <li><strong>Einordnungsgespräch:</strong> 60 Minuten</li>
+            <li><strong>Report:</strong> innerhalb von 24 Std.</li>
+          </ul>
+          <p>
+            Wichtig: Das ist kein „Projekt über Wochen“, sondern ein kompakter Prozess, der dir wieder Richtung gibt.
+          </p>
+        </div>
+
+        <div class="content-card">
+          <h3>Muss ich etwas vorbereiten?</h3>
+          <p>Nein.</p>
+          <p>Du brauchst keinen Businessplan, keine KPI-Liste und keine Excel.</p>
+          <p>Was du brauchst, ist:</p>
+          <ul>
+            <li>20 ruhige Minuten</li>
+            <li>spontane Antworten</li>
+            <li>die Bereitschaft, dein Business so anzuschauen, wie es gerade wirklich ist</li>
+          </ul>
+          <p>Wenn Zahlen oder Daten relevant sind, kommen sie im Gespräch ganz natürlich dazu.</p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>Was ist, wenn mein Business gerade chaotisch ist?</h3>
+          <p>Dann ist das oft genau der richtige Zeitpunkt.</p>
+          <p>Denn Chaos ist meistens kein Charakterthema.</p>
+          <p>Chaos ist häufig ein Strukturthema.</p>
+          <p>
+            Der Business-System-Fit setzt nicht voraus, dass bei dir schon „alles sauber“ ist. Er hilft dir, wieder
+            Ordnung in das zu bringen, was gerade zu viel gleichzeitig ist.
+          </p>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>Woran merke ich, dass das Ergebnis gut ist?</h3>
+          <p>Ein gutes Ergebnis fühlt sich an wie:</p>
+          <ul>
+            <li>„Jetzt verstehe ich, warum das gerade so ist.“</li>
+            <li>„Jetzt weiß ich, welche Entscheidung als Nächstes Sinn ergibt.“</li>
+            <li>„Jetzt kann ich Dinge weglassen, ohne Angst zu haben, etwas Wichtiges zu verpassen.“</li>
+          </ul>
+          <p>Wenn du danach einfacher entscheiden kannst, war es ein gutes Ergebnis.</p>
+        </div>
+
+        <div class="content-card">
+          <h3>Treffe ich die Entscheidungen allein?</h3>
+          <p>Ja.</p>
+          <p>Der Business-System-Fit nimmt dir keine Verantwortung ab.</p>
+          <p>Er macht Verantwortung leichter, weil die Lage klarer wird.</p>
+          <p>Du bekommst Struktur, Einordnung und einen Entscheidungsrahmen.</p>
+          <p>Die Entscheidung bleibt bei dir.</p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>Was kann ich realistisch erwarten – ohne dass mir etwas „versprochen“ wird?</h3>
+          <p>Du kannst erwarten, dass wir sauber arbeiten. Das heißt:</p>
+          <ul>
+            <li>Wir ordnen deine Situation nachvollziehbar ein.</li>
+            <li>Wir machen Zusammenhänge sichtbar, die im Alltag untergehen.</li>
+            <li>Wir verdichten auf das Wesentliche, statt noch mehr Komplexität zu erzeugen.</li>
+            <li>Du bekommst das Ergebnis dokumentiert.</li>
+          </ul>
+          <p>Was du <strong>nicht</strong> brauchst, ist Glaube.</p>
+          <p>Du bekommst Begründungen.</p>
+        </div>
+
+        <div class="content-card">
+          <h3>Wie läuft die Kommunikation?</h3>
+          <p>
+            Während des Business-System-Fit treffen wir uns für ca. 60 Minuten in einem Zoom-Call für das
+            Einordnungsgespräch.
+          </p>
+          <p>Danach bekommst du eine E-Mail mit deinem Report.</p>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>Was passiert mit meinen Daten?</h3>
+          <p>
+            Wir gehen sparsam mit Daten um und verarbeiten nur, was für den Prozess wirklich nötig ist. Die Details
+            findest du transparent in der Datenschutzerklärung.
+          </p>
+        </div>
+
+        <div class="content-card">
+          <h3>Was passiert nach dem Business-System-Fit?</h3>
+          <p>Erstmal: du hast Klarheit und einen Entscheidungsrahmen.</p>
+          <p>Was du daraus machst, entscheidest du.</p>
+          <p>Manche setzen direkt um.</p>
+          <p>Manche lassen es erstmal wirken.</p>
+          <p>Manche nutzen es als saubere Standortbestimmung.</p>
+          <p>In allen Fällen gilt: Der Wert entsteht durch die Entscheidungssicherheit.</p>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>Noch Fragen?</h3>
+          <p>
+            Schreib mir direkt. <a href="https://t.me/business_architekt" target="_blank" rel="noreferrer">Telegram</a>
+            oder <a href="mailto:kontakt@mariowittmer.de">E-Mail</a>
+          </p>
+          <div class="checkmarks">
+            <span>Kein Abo</span>
+            <span>Keine Folgekosten</span>
+            <span>Klare Einordnung</span>
+          </div>
+          <p><strong>Business-System-Fit starten</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .content-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(1.5rem, 3vw, 2.5rem);
+      margin-top: 2rem;
+    }
+
+    :global(.content-card) {
+      border-radius: 8px;
+      padding-left: clamp(2.25rem, 5vw, 3.5rem) !important;
+      padding-right: clamp(2.25rem, 5vw, 3.5rem) !important;
+    }
+
+    .card-dark {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #F7F6F2;
+    }
+
+    .card-dark h3 {
+      color: #F7F6F2;
+    }
+
+    .card-dark p,
+    .card-dark ul,
+    .card-dark ol,
+    .card-dark li {
+      color: #b8b5d0;
+    }
+
+    .card-cta {
+      background: linear-gradient(135deg, rgba(16, 7, 70, 0.08) 0%, rgba(151, 131, 44, 0.06) 100%);
+      border-color: var(--divider);
+    }
+
+    @media (max-width: 900px) {
+      .content-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</PremiumSubpageLayout>
