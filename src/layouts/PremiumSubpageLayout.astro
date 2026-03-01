@@ -20,7 +20,6 @@ const normalizePath = (path: string) => {
 };
 
 const currentPath = normalizePath(Astro.url.pathname);
-const visibleNavItems = navItems.filter((item) => normalizePath(item.href) !== currentPath);
 ---
 
 <!DOCTYPE html>
@@ -150,6 +149,7 @@ const visibleNavItems = navItems.filter((item) => normalizePath(item.href) !== c
         white-space: nowrap;
       }
       .header-nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
+      .header-nav a.active { opacity: 1; text-decoration: underline; text-underline-offset: 4px; font-weight: 600; }
       .nav-cta {
         display: inline-block;
         background: var(--primary);
@@ -164,6 +164,25 @@ const visibleNavItems = navItems.filter((item) => normalizePath(item.href) !== c
         transition: background 0.2s;
       }
       .nav-cta:hover { background: var(--primary-dark); color: #fff; }
+
+      /* Hamburger button */
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+      }
+      .menu-toggle span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--primary);
+        border-radius: 2px;
+      }
 
       .hero {
         padding-block: clamp(3.5rem, 7vw, 5.5rem);
@@ -221,8 +240,25 @@ const visibleNavItems = navItems.filter((item) => normalizePath(item.href) !== c
       .footer-links a:hover { color: rgba(247,246,242,0.9); }
 
       @media (max-width: 900px) {
-        .header-inner { flex-direction: column; align-items: flex-start; }
-        .header-nav { justify-content: flex-start; }
+        .header-inner { position: relative; }
+        .menu-toggle { display: flex; }
+        .header-nav {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: rgba(247,246,242,0.97);
+          backdrop-filter: blur(8px);
+          border-bottom: 1px solid var(--divider);
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 1rem clamp(1.25rem, 5vw, 3rem);
+          gap: 0.75rem;
+          z-index: 99;
+        }
+        .header-nav.open { display: flex; }
+        .nav-cta { display: none; }
       }
     </style>
   </head>
@@ -233,11 +269,19 @@ const visibleNavItems = navItems.filter((item) => normalizePath(item.href) !== c
           <a href="/" class="logo">
             <img src="/ba_logo_header.svg?v=2" alt="Business Architekt" style="height: 40px; width: auto;">
           </a>
-          <nav class="header-nav" aria-label="Seitennavigation">
-            {visibleNavItems.map((item) => (
-              <a href={item.href}>{item.label}</a>
-            ))}
+          <nav id="main-nav" class="header-nav" aria-label="Seitennavigation">
+            {navItems.map((item) => {
+              const isActive = currentPath === normalizePath(item.href);
+              return (
+                <a href={item.href} class:list={[{ active: isActive }]}>{item.label}</a>
+              );
+            })}
           </nav>
+          <button id="menu-toggle" class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
           <a href="https://bot.mariowittmer.de/business-system-fit-v-3-4-1-r2vcd4e" class="nav-cta" target="_blank" rel="noopener noreferrer">Dein nächster Schritt</a>
         </div>
       </div>
@@ -259,5 +303,25 @@ const visibleNavItems = navItems.filter((item) => normalizePath(item.href) !== c
         </div>
       </div>
     </footer>
+
+    <script>
+      const toggle = document.getElementById('menu-toggle');
+      const nav = document.getElementById('main-nav');
+      if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+          const isOpen = nav.classList.contains('open');
+          nav.classList.toggle('open', !isOpen);
+          toggle.setAttribute('aria-expanded', String(!isOpen));
+          toggle.setAttribute('aria-label', isOpen ? 'Menü öffnen' : 'Menü schließen');
+        });
+        nav.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            nav.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.setAttribute('aria-label', 'Menü öffnen');
+          });
+        });
+      }
+    </script>
   </body>
 </html>
