@@ -1,6 +1,6 @@
-# Business Architekt – Statische Website
+# Business Architekt – Website
 
-Diese Website ist als **Astro Static Site** mit **TailwindCSS** aufgebaut.
+Diese Website ist als **statische Astro-Site** mit **TailwindCSS** aufgebaut und wird über **Cloudflare Workers** bereitgestellt.
 
 ## Voraussetzungen
 
@@ -22,31 +22,51 @@ Die Seite läuft anschließend standardmäßig unter `http://localhost:4321`.
 npm run build
 ```
 
-Der statische Output liegt danach im Ordner `dist/`.
+Der Output liegt danach im Ordner `dist/`.
+
+## Deployment
+
+```bash
+npm run deploy
+```
+
+Stellt die Seite über Cloudflare Workers (Wrangler) bereit. Konfiguration: `wrangler.jsonc`.
 
 ## Seitenstruktur
 
 - `/` Startseite
-- `/warum` Warum Business Architekt
-- `/so-funktioniert-es` Ablauf
+- `/so-funktioniert-es` Business-System-Fit (Ablauf)
+- `/warum` Business Architekt (Über mich)
 - `/sparring` Sparring
 - `/faq` FAQ
+- `/impressum` Impressum
+- `/datenschutz` Datenschutzerklärung
+- `/agb` Allgemeine Geschäftsbedingungen
 
 ## Ordnerstruktur
 
 ```text
 src/
   components/
-    Footer.astro
     Header.astro
+    Footer.astro
   layouts/
+    PremiumSubpageLayout.astro
     BaseLayout.astro
   pages/
     index.astro
-    warum.astro
     so-funktioniert-es.astro
+    warum.astro
     sparring.astro
     faq.astro
+    impressum.astro
+    datenschutz.astro
+    agb.astro
   styles/
     global.css
+public/
+  ba_logo_header.svg
+  ba_logo_baum.svg
+  ba_logo-schriftzug.svg
+  ba_portrait.svg
 ```
