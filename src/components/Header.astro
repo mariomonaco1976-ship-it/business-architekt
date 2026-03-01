@@ -18,18 +18,37 @@ const normalizePath = (path: string) => {
 const currentPath = normalizePath(Astro.url.pathname);
 ---
 
-<header class="border-b border-slate-200">
-  <div class="mx-auto flex w-full max-w-6xl flex-col gap-4 px-6 py-6 md:flex-row md:items-center md:justify-between">
+<header class="relative border-b border-slate-200">
+  <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
     <a href="/" class="text-xl font-semibold tracking-tight text-slate-900">Business Architekt</a>
-    <nav aria-label="Hauptnavigation" class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600">
+
+    <!-- Hamburger button – only visible on mobile -->
+    <button
+      id="menu-toggle"
+      aria-label="Menü öffnen"
+      aria-expanded="false"
+      aria-controls="main-nav"
+      class="md:hidden flex flex-col justify-center gap-1.5 p-2"
+    >
+      <span class="block h-0.5 w-6 bg-slate-700"></span>
+      <span class="block h-0.5 w-6 bg-slate-700"></span>
+      <span class="block h-0.5 w-6 bg-slate-700"></span>
+    </button>
+
+    <!-- Navigation – hidden on mobile until toggled, always visible on desktop -->
+    <nav
+      id="main-nav"
+      aria-label="Hauptnavigation"
+      class="hidden md:flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-600 absolute md:static top-full left-0 right-0 bg-white border-b border-slate-200 md:border-0 px-6 py-4 md:p-0 flex-col md:flex-row"
+    >
       {navItems.map((item) => {
         const isActive = currentPath === normalizePath(item.href);
         return (
           <a
             href={item.href}
             class:list={[
-              'transition-none',
-              isActive ? 'font-medium text-slate-900 underline underline-offset-4' : 'hover:text-slate-900',
+              'font-medium transition-none',
+              isActive ? 'text-slate-900 underline underline-offset-4' : 'text-slate-500 hover:text-slate-900',
             ]}
           >
             {item.label}
@@ -39,3 +58,35 @@ const currentPath = normalizePath(Astro.url.pathname);
     </nav>
   </div>
 </header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('main-nav');
+
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.contains('flex');
+      if (isOpen) {
+        nav.classList.remove('flex');
+        nav.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Menü öffnen');
+      } else {
+        nav.classList.remove('hidden');
+        nav.classList.add('flex');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.setAttribute('aria-label', 'Menü schließen');
+      }
+    });
+
+    // Close menu when a nav link is clicked (mobile)
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('flex');
+        nav.classList.add('hidden');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Menü öffnen');
+      });
+    });
+  }
+</script>
