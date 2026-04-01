@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Business Architekt – Business-System-Fit</title>
+<title>Business Architekt – Human-System-Fit</title>
 <link rel="icon" type="image/svg+xml" href="/ba_logo_baum.svg?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -190,12 +190,29 @@
     text-transform: uppercase;
     color: var(--gold);
   }
-  .hero h1 { max-width: none; }
+  .hero h1 {
+    max-width: none;
+    line-height: 1.02;
+    text-wrap: unset;
+  }
+  .hero-line {
+    display: block;
+    white-space: nowrap;
+  }
   .hero-sub {
-    font-size: clamp(17px, 1.5vw, 20px);
-    line-height: 1.6;
+    font-size: clamp(16px, 1.4vw, 19px);
+    line-height: 1.55;
     color: #3a3830;
-    max-width: 58ch;
+    max-width: 72ch;
+    text-wrap: pretty;
+  }
+  .hero-sub-line,
+  .hero-sub-end {
+    display: block;
+  }
+  .hero-sub-end {
+    color: var(--primary);
+    font-weight: 600;
   }
   .hero-sub strong { color: var(--primary); font-weight: 600; }
   .hero-levers {
@@ -650,6 +667,7 @@
   @media (max-width: 640px) {
     .header-inner { flex-direction: column; align-items: flex-start; }
     .header-nav { justify-content: flex-start; }
+    .hero-line { white-space: normal; }
     .hero-levers { grid-template-columns: 1fr; }
     .numbers-grid { grid-template-columns: 1fr; }
     .number-card:nth-child(n) { grid-column: span 1; }
@@ -676,7 +694,7 @@
         <img src="/ba_logo_header.svg?v=2" alt="Business Architekt" style="height: 40px; width: auto;">
       </a>
       <nav class="header-nav" aria-label="Seitennavigation">
-        <a href="/so-funktioniert-es">Business-System-Fit</a>
+        <a href="/so-funktioniert-es">Human-System-Fit</a>
         <a href="/warum">Business Architekt</a>
         <a href="/faq">FAQ</a>
         <a href="/sparring">Sparring</a>
@@ -692,15 +710,25 @@
 <section class="hero section">
   <div class="container">
     <div class="hero-inner">
-      <p class="hero-eyebrow">Business-System-Fit</p>
+      <p class="hero-eyebrow">Human-System-Fit</p>
 
-      <h1>Läuft es bei dir –&nbsp;und&nbsp;fühlt<br>es sich auch so an?</h1>
+      <h1>
+        <span class="hero-line">Läuft es bei dir – und fühlt</span>
+        <span class="hero-line">es sich auch so an?</span>
+      </h1>
 
       <p class="hero-sub">
-        Fast jedes Unternehmen zeigt am Ende eines von zwei sichtbaren Symptomen:
-        <strong>zu wenig Einkommen</strong> oder <strong>zu hohe Kosten</strong> – an Zeit, Geld, Energie.
-        Das sind die Symptome. Nicht das eigentliche Problem.
+        <span class="hero-sub-line">Am Ende zeigen sich fast immer nur zwei Symptome:</span>
+        <span class="hero-sub-line"><strong>zu wenig Einkommen</strong> oder <strong>zu hohe Kosten</strong> – an Zeit, Geld oder Energie.</span>
+        <span class="hero-sub-end">Das sind die Symptome. Nicht das eigentliche Problem.</span>
       </p>
+
+      <div class="hero-thesis">
+        <p>
+          In vielen Fällen ist weder Markt noch Kostenstruktur das Kernproblem.<br>
+          <strong>Die Geschäftsarchitektur passt nicht zur Entscheidungslogik des Unternehmers.</strong>
+        </p>
+      </div>
 
       <div class="hero-levers">
         <div class="hero-lever">
@@ -717,15 +745,8 @@
         </div>
       </div>
 
-      <div class="hero-thesis">
-        <p>
-          In vielen Fällen ist weder Markt noch Kostenstruktur das Kernproblem.<br>
-          <strong>Die Geschäftsarchitektur passt nicht zur Entscheidungslogik des Unternehmers.</strong>
-        </p>
-      </div>
-
       <div class="hero-actions">
-        <a href="#start" class="btn-primary">Business-System-Fit starten</a>
+        <a href="#start" class="btn-primary">Human-System-Fit starten</a>
         <p class="hero-note">15–20 Minuten – keine Folgekosten, kein Abo</p>
       </div>
     </div>
@@ -872,7 +893,7 @@
 ============================================================ -->
 <section class="section">
   <div class="container">
-    <p class="section-label">Nach dem Business-System-Fit</p>
+    <p class="section-label">Nach dem Human-System-Fit</p>
     <h2>Perspektivwechsel</h2>
     <p class="section-intro">Kein Versprechen. Eine strukturelle Einordnung – und die Entscheidungsgrundlage, die daraus folgt.</p>
 
@@ -925,16 +946,16 @@
 ============================================================ -->
 <section class="section">
   <div class="container">
-    <p class="section-label">Evaluierungsphase Q1 2026</p>
-    <h2>Klarheit soll bezahlbar sein</h2>
-    <p class="section-intro">Der Business-System-Fit befindet sich in einer strukturierten Evaluierungsphase. Der Einstieg ist bewusst niedrigschwellig – ohne Upsell-Druck, ohne Folgekosten.</p>
+    <p class="section-label">Vor der nächsten Investition</p>
+    <h2>Entscheidungssicherheit – bevor es teuer wird.</h2>
+    <p class="section-intro">Der Human-System-Fit ist ein strukturierter Prüfpunkt. Du prüfst, was in Deiner Situation gerade trägt – und was nur Aufwand, Druck oder eine teure Ehrenrunde erzeugt.</p>
 
     <div class="pricing-block">
       <div class="price-card price-active">
-        <p class="price-label">Jetzt – bis Ende Q1 2026</p>
-        <div class="price-tag">160 €</div>
-        <h3>Evaluierungsphase</h3>
-        <p>Die Evaluierungsphase dient der strukturellen Feinkalibrierung von Anwendung, Darstellung und Report-Architektur.</p>
+        <p class="price-label">Human-System-Fit</p>
+        <div class="price-tag">250 €</div>
+        <h3>Strukturierte Einordnung</h3>
+        <p>Ein klarer Entscheidungsrahmen für Deine Geschäftsrealität – bevor Du weiter investierst.</p>
         <div class="checkmarks">
           <span class="checkmark-item">Kein Abo</span>
           <span class="checkmark-item">Keine Folgekosten</span>
@@ -942,14 +963,14 @@
         </div>
       </div>
       <div class="price-card">
-        <p class="price-label">Ab Q2 2026</p>
-        <div class="price-tag" style="color:var(--primary);">250 €</div>
-        <h3>Regulärer Preis</h3>
-        <p>Nach Abschluss der Evaluierungsphase gilt der reguläre Preis. Die Leistung bleibt identisch – strukturierte Einordnung deiner Geschäftsrealität mit optionaler gemeinsamer Auswertung.</p>
+        <p class="price-label">Sparring</p>
+        <div class="price-tag" style="color:var(--primary);">750 €</div>
+        <h3>6 Wochen Begleitung</h3>
+        <p>Wenn Klarheit im Alltag stabil gehalten und in saubere Umsetzung überführt werden soll.</p>
         <div class="checkmarks">
-          <span class="checkmark-item">Kein Abo</span>
-          <span class="checkmark-item">Keine Folgekosten</span>
-          <span class="checkmark-item">Klare Einordnung</span>
+          <span class="checkmark-item">3 × 60 Minuten</span>
+          <span class="checkmark-item">Discord-Begleitung</span>
+          <span class="checkmark-item">Nur mit Human-System-Fit</span>
         </div>
       </div>
     </div>
@@ -964,10 +985,15 @@
 <section class="section closing-section" id="start">
   <div class="container">
     <div class="closing-inner">
-      <p class="section-label">Bereit für Klarheit?</p>
-      <h2>15–20 Minuten Selbstreflexion</h2>
-      <p>Beantworte die strukturierten Fragen in deinem eigenen Tempo. Auf Wunsch folgt eine gemeinsame, individuelle Einordnung deiner Geschäftsrealität.</p>
-      <p>Du musst jetzt nichts optimieren. Du solltest nur wissen, welche Optionen dich wirklich tragen, damit sich dein Business rund anfühlt.</p>
+      <p class="section-label">Bevor Du weiter investierst</p>
+      <h2>15–20 Minuten für mehr Entscheidungssicherheit</h2>
+      <p>Beantworte die strukturierten Fragen in Deinem eigenen Tempo. Auf Wunsch folgt eine gemeinsame Einordnung, damit sichtbar wird, was zuerst trägt – und was besser noch wartet.</p>
+      <p>Du musst jetzt nichts optimieren. Du solltest nur vermeiden, Zeit, Geld oder Energie in die falsche Reihenfolge zu stecken.</p>
+      <div class="checkmarks" style="justify-content:center; margin: 1.25rem 0 0;">
+        <span class="checkmark-item">250 €</span>
+        <span class="checkmark-item">Keine Folgekosten</span>
+        <span class="checkmark-item">Kein Abo</span>
+      </div>
 
       <div class="bot-placeholder">
         <iframe
