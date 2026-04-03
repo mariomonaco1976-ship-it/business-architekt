@@ -3,16 +3,16 @@ import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
 ---
 
 <PremiumSubpageLayout title="FAQ">
-  <section class="hero section">
+  <section class="hero section" style="padding-top: clamp(2.25rem, 4vw, 3.25rem); padding-bottom: clamp(0.9rem, 1.8vw, 1.35rem);">
     <div class="container">
+      <p class="section-label" style="padding-left: clamp(2.25rem, 5vw, 3.5rem); margin-bottom: 0.5rem;">Klar. Direkt. Ohne Umweg.</p>
       <h1 style="padding-left: clamp(2.25rem, 5vw, 3.5rem);">FAQ</h1>
-      <p class="hero-intro" style="padding-left: clamp(2.25rem, 5vw, 3.5rem);">Klar. Direkt. Ohne Umweg.</p>
     </div>
   </section>
 
   <hr class="divider-line" />
 
-  <section class="section">
+  <section class="section" style="padding-top: clamp(0.9rem, 1.8vw, 1.35rem);">
     <div class="container">
       <div class="content-cards-grid">
         <div class="content-card">
@@ -56,14 +56,16 @@ import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
           <p>Wenn Zahlen relevant sind, kommen sie im Gespräch ganz natürlich dazu.</p>
         </div>
 
-        <div class="content-card card-dark">
-          <h3>Was bekomme ich konkret?</h3>
-          <p>Einen klaren Entscheidungsrahmen:</p>
+        <div class="content-card card-dark card-highlight-value" style="border: 1px solid var(--gold); box-shadow: 0 10px 30px rgba(16, 7, 70, 0.12);">
+          <p class="value-kicker" style="color: #d4c86a;">Dein klarer Nutzen</p>
+          <h3>Was Du konkret mitnimmst</h3>
+          <p class="value-lead" style="color: #F7F6F2;">Klarheit für die nächsten Entscheidungen.</p>
           <ul>
-            <li>Was jetzt Priorität hat.</li>
-            <li>Was warten kann.</li>
-            <li>Was Du bewusst weglässt.</li>
+            <li><span style="color: #d4c86a;">Prioritäten</span></li>
+            <li><span style="color: #d4c86a;">Reihenfolge</span></li>
+            <li><span style="color: #d4c86a;">Options-Entlastung</span></li>
           </ul>
+          <p class="value-closing" style="color: #d4c86a;">Damit Du vorher weißt, was passt – und nicht nachher Lehrgeld bezahlst.</p>
         </div>
 
         <div class="content-card card-cta">
@@ -108,7 +110,6 @@ import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
             <span>Keine Folgekosten</span>
             <span>Klare Einordnung</span>
           </div>
-          <p><strong>Human-System-Fit starten</strong></p>
         </div>
       </div>
     </div>
@@ -119,7 +120,7 @@ import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: clamp(1.5rem, 3vw, 2.5rem);
-      margin-top: 2rem;
+      margin-top: 0;
     }
 
     :global(.content-card) {
@@ -148,6 +149,36 @@ import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
     .card-cta {
       background: linear-gradient(135deg, rgba(16, 7, 70, 0.08) 0%, rgba(151, 131, 44, 0.06) 100%);
       border-color: var(--divider);
+    }
+
+    .card-highlight-value {
+      border: 1px solid var(--gold);
+      box-shadow: 0 10px 30px rgba(16, 7, 70, 0.12);
+    }
+
+    .value-kicker {
+      margin-top: 0;
+      margin-bottom: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #d4c86a !important;
+    }
+
+    .value-lead {
+      font-size: 1.05rem;
+      color: #F7F6F2 !important;
+      font-weight: 600;
+    }
+
+    .value-closing {
+      color: #d4c86a !important;
+      font-weight: 600;
+    }
+
+    .card-highlight-value li::marker {
+      color: #d4c86a;
     }
 
     @media (max-width: 900px) {

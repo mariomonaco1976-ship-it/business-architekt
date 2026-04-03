@@ -101,6 +101,11 @@ const visibleNavItems = navItems.filter((item) => normalizePath(item.href) !== c
         padding-inline: clamp(1.25rem, 5vw, 3rem);
       }
 
+      main .container {
+        max-width: 1480px;
+        padding-inline: clamp(0.9rem, 2.2vw, 1.75rem);
+      }
+
       .section { padding-block: var(--section-gap); }
       .divider-line { border: none; border-top: 1px solid var(--divider); }
 
@@ -152,8 +157,8 @@ const visibleNavItems = navItems.filter((item) => normalizePath(item.href) !== c
       .header-nav a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 4px; }
       .nav-cta {
         display: inline-block;
-        background: var(--primary);
-        color: #fff;
+        background: #fff;
+        color: var(--gold);
         font-family: var(--font-body);
         font-size: 0.9rem;
         font-weight: 600;
@@ -163,7 +168,7 @@ const visibleNavItems = navItems.filter((item) => normalizePath(item.href) !== c
         border-radius: 8px;
         transition: background 0.2s;
       }
-      .nav-cta:hover { background: var(--primary-dark); color: #fff; }
+      .nav-cta:hover { background: #f7f3e6; color: var(--gold); }
 
       .hero {
         padding-block: clamp(3.5rem, 7vw, 5.5rem);

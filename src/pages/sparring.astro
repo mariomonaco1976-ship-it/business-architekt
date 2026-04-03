@@ -3,9 +3,9 @@ import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
 ---
 
 <PremiumSubpageLayout title="Sparring">
-  <section class="hero section">
+  <section class="hero section" style="padding-top: clamp(2.25rem, 4vw, 3.25rem); padding-bottom: clamp(0.9rem, 1.8vw, 1.35rem);">
     <div class="container">
-      <p class="hero-intro" style="margin-bottom: 0.5rem;">Nach dem Human-System-Fit</p>
+      <p class="section-label" style="margin-bottom: 0.5rem; padding-left: clamp(2.25rem, 5vw, 3.5rem); padding-right: clamp(2.25rem, 5vw, 3.5rem);">Nach dem Human-System-Fit</p>
       <h1>Sparring – Umsetzungsbegleitung</h1>
       <p class="hero-intro">
         Klarheit allein reicht nicht immer. Sparring überführt Einordnung in einen stabilen Umsetzungstakt – ohne Aktionismus, ohne Drift.
@@ -15,7 +15,7 @@ import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
 
   <hr class="divider-line" />
 
-  <section class="section">
+  <section class="section" style="padding-top: clamp(0.9rem, 1.8vw, 1.35rem);">
     <div class="container">
       <div class="content-cards-grid">
         <!-- Card 1: Was nach dem Human-System-Fit -->
@@ -47,7 +47,7 @@ import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
           <p>6 Wochen, 3 Termine à 60 Minuten</p>
           <ul>
             <li><strong>3 × 60 Minuten</strong> Termine</li>
-            <li><strong>Asynchrone Begleitung</strong> zwischen den Terminen (Discord)</li>
+            <li><strong>Asynchrone Begleitung</strong> zwischen den Terminen</li>
             <li>
               Ein stabiler <strong>6‑Wochen‑Umsetzungsrahmen</strong> als Arbeitsbasis (inkl. „Nicht jetzt“-Liste)
             </li>
@@ -59,7 +59,7 @@ import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
         </div>
 
         <!-- Card 3: Wie läuft das Sparring ab? -->
-        <div class="content-card card-dark">
+        <div class="content-card card-dark card-left-reference">
           <h2>Wie läuft das Sparring ab?</h2>
           <ol>
             <li><strong>Voraussetzung:</strong> Human-System-Fit ist abgeschlossen</li>
@@ -73,7 +73,7 @@ import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
               Entscheidung: Ende oder Verlängerung
             </li>
             <li>
-              <strong>Asynchroner Austausch:</strong> Discord. Kurze Inputs, klare Rückfragen, Feedback als Grundlage für
+              <strong>Asynchroner Austausch:</strong> Kurze Inputs, klare Rückfragen und Feedback als Grundlage für
               den nächsten Termin.
             </li>
           </ol>
@@ -97,7 +97,7 @@ import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
         </div>
 
         <!-- Card 5: Rahmen & Haltung -->
-        <div class="content-card">
+        <div class="content-card card-left-match">
           <h2>Rahmen</h2>
           <p>6 Wochen · 3 Termine à 60 Minuten · asynchrone Begleitung</p>
           <p>
@@ -143,7 +143,11 @@ import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: clamp(1.5rem, 3vw, 2.5rem);
-      margin-top: 2rem;
+      margin-top: 0;
+    }
+
+    .card-left-match {
+      align-self: start;
     }
 
     :global(.content-card) {
@@ -211,4 +215,25 @@ import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
       }
     }
   </style>
+
+  <script is:inline>
+    const syncSparringLeftCardHeight = () => {
+      const referenceCard = document.querySelector('.card-left-reference');
+      const matchingCard = document.querySelector('.card-left-match');
+      if (!referenceCard || !matchingCard) return;
+
+      matchingCard.style.height = 'auto';
+
+      if (window.innerWidth <= 900) return;
+
+      const referenceHeight = Math.ceil(referenceCard.getBoundingClientRect().height);
+      matchingCard.style.height = `${referenceHeight}px`;
+    };
+
+    window.addEventListener('load', syncSparringLeftCardHeight);
+    window.addEventListener('resize', syncSparringLeftCardHeight);
+    window.addEventListener('pageshow', syncSparringLeftCardHeight);
+    requestAnimationFrame(syncSparringLeftCardHeight);
+    setTimeout(syncSparringLeftCardHeight, 60);
+  </script>
 </PremiumSubpageLayout>

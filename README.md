@@ -35,7 +35,7 @@ Stellt die Seite über Cloudflare Workers (Wrangler) bereit. Konfiguration: `wra
 ## Seitenstruktur
 
 - `/` Startseite
-- `/so-funktioniert-es` Business-System-Fit (Ablauf)
+- `/so-funktioniert-es` Human-System-Fit (Ablauf)
 - `/warum` Business Architekt (Über mich)
 - `/sparring` Sparring
 - `/faq` FAQ
