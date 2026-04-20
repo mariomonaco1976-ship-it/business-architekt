@@ -2,6 +2,7 @@
 
 Diese Website ist als **statische Astro-Site** mit **TailwindCSS** aufgebaut und wird über **Cloudflare Workers** bereitgestellt.
 
+
 ## Voraussetzungen
 
 - Node.js 20+
@@ -69,4 +70,3 @@ public/
   ba_logo_baum.svg
   ba_logo-schriftzug.svg
   ba_portrait.svg
-```
