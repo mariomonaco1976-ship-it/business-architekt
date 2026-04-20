@@ -1,0 +1,159 @@
+---
+import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
+---
+
+<PremiumSubpageLayout title="FAQ">
+  <section class="hero section">
+    <div class="container">
+      <h1 style="padding-left: clamp(2.25rem, 5vw, 3.5rem);">FAQ</h1>
+      <p class="hero-intro" style="padding-left: clamp(2.25rem, 5vw, 3.5rem);">Klar. Direkt. Ohne Umweg.</p>
+    </div>
+  </section>
+
+  <hr class="divider-line" />
+
+  <section class="section">
+    <div class="container">
+      <div class="content-cards-grid">
+        <div class="content-card">
+          <h3>Was ist der Human-System-Fit in einem Satz?</h3>
+          <p>Ein strukturierter Entscheidungscheck, bevor Du Zeit, Geld oder Energie falsch bindest.</p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>Für wen ist das sinnvoll?</h3>
+          <p>Für Selbstständige und kleine Unternehmen, die bereits Lehrgeld bezahlt haben und zukünftig Entscheidungen absichern wollen.</p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>Wie ist der Ablauf Schritt für Schritt?</h3>
+          <p>Der Ablauf ist klar und kompakt:</p>
+          <ol>
+            <li><strong>Fragen (15–20 Minuten):</strong> strukturierte Einordnung Deiner Lage.</li>
+            <li><strong>Gespräch (60 Minuten):</strong> persönliches Einordnungsgespräch.</li>
+            <li><strong>Report (24 Stunden):</strong> dokumentierter Entscheidungsrahmen.</li>
+          </ol>
+          <p>Bewusst linear. So bleibt es ruhig und klar.</p>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>Ist das ein KI-Companion?</h3>
+          <p>Nein.</p>
+          <p>Wir nutzen Struktur, aber die Einordnung entsteht im persönlichen Gespräch.</p>
+          <p>KI kann Hinweise geben. Entscheidungen brauchen Kontext, Verantwortung und unternehmerische Realität.</p>
+        </div>
+
+        <div class="content-card">
+          <h3>Muss ich etwas vorbereiten?</h3>
+          <p>Nein.</p>
+          <p>Du brauchst keinen Businessplan, keine KPI-Liste und keine Excel.</p>
+          <p>Du brauchst:</p>
+          <ul>
+            <li>20 ruhige Minuten</li>
+            <li>spontane, ehrliche Antworten</li>
+            <li>die Bereitschaft, Dein Business so anzuschauen, wie es gerade wirklich ist</li>
+          </ul>
+          <p>Wenn Zahlen relevant sind, kommen sie im Gespräch ganz natürlich dazu.</p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>Was bekomme ich konkret?</h3>
+          <p>Einen klaren Entscheidungsrahmen:</p>
+          <ul>
+            <li>Was jetzt Priorität hat.</li>
+            <li>Was warten kann.</li>
+            <li>Was Du bewusst weglässt.</li>
+          </ul>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>Treffe ich die Entscheidung allein?</h3>
+          <p>Ja.</p>
+          <p>Die Entscheidung bleibt bei Dir. Der Unterschied ist: Du triffst sie nicht mehr im Nebel.</p>
+        </div>
+
+        <div class="content-card">
+          <h3>Was kostet das und gibt es Folgekosten?</h3>
+          <p>Der Einstieg dauert 15–20 Minuten.</p>
+          <p>Kein Abo. Keine Folgekosten.</p>
+          <p>Du entscheidest danach, ob und wie Du weitergehst.</p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>Was passiert nach dem Human-System-Fit?</h3>
+          <p>Du hast Klarheit und eine tragfähige Reihenfolge.</p>
+          <p>Dann entscheidest Du: direkt umsetzen, sacken lassen oder im Sparring vertiefen.</p>
+        </div>
+
+        <div class="content-card">
+          <h3>Wie läuft die Kommunikation?</h3>
+          <p>Wir sprechen im Einordnungsgespräch per Zoom.</p>
+          <p>Danach bekommst Du den Report per E-Mail.</p>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>Was passiert mit meinen Daten?</h3>
+          <p>Wir verarbeiten nur, was für den Prozess nötig ist.</p>
+          <p>Die Details findest Du transparent in der Datenschutzerklärung.</p>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>Noch Fragen?</h3>
+          <p>
+            Schreib mir direkt. <a href="https://t.me/business_architekt" target="_blank" rel="noreferrer">Telegram</a>
+            oder <a href="mailto:kontakt@mariowittmer.de">E-Mail</a>
+          </p>
+          <div class="checkmarks">
+            <span>Kein Abo</span>
+            <span>Keine Folgekosten</span>
+            <span>Klare Einordnung</span>
+          </div>
+          <p><strong>Human-System-Fit starten</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .content-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(1.5rem, 3vw, 2.5rem);
+      margin-top: 2rem;
+    }
+
+    :global(.content-card) {
+      border-radius: 8px;
+      padding-left: clamp(2.25rem, 5vw, 3.5rem) !important;
+      padding-right: clamp(2.25rem, 5vw, 3.5rem) !important;
+    }
+
+    .card-dark {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #F7F6F2;
+    }
+
+    .card-dark h3 {
+      color: #F7F6F2;
+    }
+
+    .card-dark p,
+    .card-dark ul,
+    .card-dark ol,
+    .card-dark li {
+      color: #b8b5d0;
+    }
+
+    .card-cta {
+      background: linear-gradient(135deg, rgba(16, 7, 70, 0.08) 0%, rgba(151, 131, 44, 0.06) 100%);
+      border-color: var(--divider);
+    }
+
+    @media (max-width: 900px) {
+      .content-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</PremiumSubpageLayout>

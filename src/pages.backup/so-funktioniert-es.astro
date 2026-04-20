@@ -1,0 +1,250 @@
+---
+import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
+---
+
+<PremiumSubpageLayout title="Human-System-Fit">
+  <section class="hero section hero-tight-bottom">
+    <div class="container">
+      <p class="hero-intro" style="padding-left: clamp(2.25rem, 5vw, 3.5rem); margin-bottom: 0.5rem; color: var(--gold);">Der Einstieg</p>
+      <h1 style="padding-left: clamp(2.25rem, 5vw, 3.5rem);">Human-System-Fit</h1>
+      <p class="hero-intro" style="padding-left: clamp(2.25rem, 5vw, 3.5rem);">
+        Klarheit darüber, was jetzt trägt und was wartet. Nicht durch einen KI-Companion, sondern durch saubere Einordnung im persönlichen Gespräch.
+      </p>
+    </div>
+  </section>
+
+  <hr class="divider-line" />
+
+  <section class="section section-tight-top">
+    <div class="container">
+      <div class="cards-grid">
+        <!-- Spalte 1: Kachel 1 -->
+        <div class="content-card card-step-match">
+          <h2>1) Standort klären<br /><span class="time-line">(15–20 Minuten)</span></h2>
+          <p>Du gehst anhand strukturierter Fragen auf Folgendes ein:</p>
+          <ul>
+            <li>Deiner Denk- und Entscheidungslogik,</li>
+            <li>der aktuellen Geschäftsmechanik,</li>
+            <li>Belastung und Energiehaushalt,</li>
+            <li>Wirkung und Reibungsverlusten.</li>
+          </ul>
+          <p>So wird sichtbar, wo gerade Wirkung entsteht und wo Du Lehrgeld zahlst.</p>
+        </div>
+
+        <!-- Spalte 2: Kachel 2 -->
+        <div class="content-card card-step-reference card-dark-step" style="background: var(--primary); border-color: var(--primary); color: #F7F6F2;">
+          <h2 style="color: #F7F6F2;">2) Persönliches Einordnungsgespräch<br /><span class="time-line">(60 Minuten)</span></h2>
+          <p style="color: #d9d6eb;">Hier ordnen wir Deine Situation gemeinsam sauber ein.</p>
+          <p style="color: #d9d6eb;">Wir trennen klar:</p>
+          <ul style="color: #d9d6eb;">
+            <li>Struktur von Aktionismus</li>
+            <li>Signal von Rauschen</li>
+            <li>Optionen von der stimmigen Entscheidung</li>
+          </ul>
+        </div>
+
+        <!-- Spalte 1: Kachel 3 -->
+        <div class="content-card card-step-match card-report">
+          <h2>3) Entscheidungsrahmen<br /><span class="time-line">in 24 Stunden</span></h2>
+          <p>
+            Du erhältst den Human-System-Fit als dokumentierten Entscheidungsrahmen. Innerhalb von 24 Stunden nach
+            dem Gespräch.
+          </p>
+          <p>Du nutzt den Report direkt:</p>
+          <ul>
+            <li>für Prioritäten im Geschäftsalltag</li>
+            <li>für die nächsten Maßnahmen</li>
+            <li>für strategische Entscheidungen ohne Blindflug</li>
+          </ul>
+        </div>
+
+        <!-- Spalte 2: Bereit zu starten mit Bot -->
+        <div class="content-card card-cta">
+          <h2>Bereit für Klarheit?</h2>
+          <p>Ich freue mich darauf, Dich und Dein Business im Einordnungsgespräch kennenzulernen.</p>
+          <p><strong>Jetzt starten · 15–20 Minuten</strong></p>
+          <div class="checkmarks">
+            <span>Kein Abo</span>
+            <span>Keine Folgekosten</span>
+            <span>Klare Einordnung</span>
+          </div>
+          <div class="bot-embed">
+            <iframe
+              src="https://bot.mariowittmer.de/business-system-fit-v-3-4-1-r2vcd4e"
+              style="width: 100%; height: 600px; border: 0; border-radius: 8px; margin-top: 1.5rem;"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .hero-tight-bottom {
+      padding-bottom: clamp(1.5rem, 3vw, 2.25rem) !important;
+    }
+
+    .section-tight-top {
+      padding-top: clamp(1.5rem, 3vw, 2.25rem) !important;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(1.5rem, 3vw, 2.5rem);
+      margin-top: 0;
+      align-items: start;
+    }
+
+    .cards-grid .content-card > h2:first-child {
+      margin-top: 0 !important;
+    }
+
+    .time-line {
+      display: inline-block;
+      margin-top: 0.2rem;
+      white-space: nowrap;
+    }
+
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--divider);
+      border-radius: 8px;
+      padding: clamp(1.75rem, 4vw, 2.5rem);
+    }
+
+    .card-step-match {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 0;
+    }
+
+    .card-dark-step {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #F7F6F2;
+    }
+
+    .card-dark-step h2 {
+      color: #F7F6F2;
+    }
+
+    .card-dark-step p,
+    .card-dark-step ul,
+    .card-dark-step li {
+      color: #d9d6eb;
+    }
+
+    .card-cta {
+      background: linear-gradient(135deg, rgba(16, 7, 70, 0.02) 0%, rgba(151, 131, 44, 0.04) 100%);
+    }
+
+    .card-report {
+      max-height: none;
+      overflow: visible;
+    }
+
+    .price-card {
+      background: var(--card-bg);
+      border: 1px solid var(--divider);
+      border-radius: 8px;
+      padding: clamp(1.75rem, 4vw, 2.5rem);
+    }
+
+    .price-card-highlight {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #F7F6F2;
+    }
+
+    .price-card-highlight h3 {
+      color: #F7F6F2;
+    }
+
+    .price-tag {
+      font-family: var(--font-head);
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 700;
+      line-height: 1;
+      margin-block: 0.75rem;
+    }
+
+    .price-card-highlight .price-tag {
+      color: #d4c86a;
+    }
+
+    .price-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.25rem;
+    }
+
+    .price-card-highlight .price-label {
+      color: #d4c86a;
+    }
+
+    .price-card p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      max-width: none;
+    }
+
+    .price-card-highlight p {
+      color: #b8b5d0;
+    }
+
+    .price-card-highlight .checkmark-item {
+      color: #9995b0;
+    }
+
+    .checkmark-item::before {
+      content: '✓  ';
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .price-card-highlight .checkmark-item::before {
+      color: #d4c86a;
+    }
+
+    @media (max-width: 900px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card-step-match {
+        height: auto !important;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    const syncStepCardHeights = () => {
+      const referenceCard = document.querySelector('.card-step-reference');
+      const matchingCards = document.querySelectorAll('.card-step-match');
+      if (!referenceCard || matchingCards.length === 0) return;
+
+      matchingCards.forEach((card) => {
+        card.style.height = 'auto';
+      });
+
+      if (window.innerWidth <= 900) return;
+
+      const referenceHeight = Math.ceil(referenceCard.getBoundingClientRect().height);
+      matchingCards.forEach((card) => {
+        card.style.height = `${referenceHeight}px`;
+      });
+    };
+
+    window.addEventListener('load', syncStepCardHeights);
+    window.addEventListener('resize', syncStepCardHeights);
+    window.addEventListener('pageshow', syncStepCardHeights);
+    requestAnimationFrame(syncStepCardHeights);
+    setTimeout(syncStepCardHeights, 60);
+  </script>
+</PremiumSubpageLayout>

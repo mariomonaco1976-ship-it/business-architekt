@@ -1,0 +1,173 @@
+---
+import PremiumSubpageLayout from '../layouts/PremiumSubpageLayout.astro';
+---
+
+<PremiumSubpageLayout title="Datenschutz">
+  <section class="hero section">
+    <div class="container">
+      <h1 style="padding-left: clamp(2.25rem, 5vw, 3.5rem);">Datenschutzerklärung</h1>
+    </div>
+  </section>
+
+  <hr class="divider-line" />
+
+  <section class="section">
+    <div class="container">
+      <div class="content-cards-grid">
+        <div class="content-card">
+          <h3>1. Verantwortlicher</h3>
+          <p>Mario Wittmer, Business Architekt</p>
+          <p>c/o Baumgartner</p>
+          <p>Kurbelwiesgasse 3</p>
+          <p>80939 München</p>
+          <p>E-Mail: <a href="mailto:kontakt@mariowittmer.de">kontakt@mariowittmer.de</a></p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>2. Grundsätze</h3>
+          <p>Ich verarbeite personenbezogene Daten nach den Vorgaben der DSGVO.</p>
+          <p>Ich verarbeite nur Daten, die für die jeweiligen Zwecke erforderlich sind (Datenminimierung).</p>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>3. Deine Rechte</h3>
+          <p>Du hast im Rahmen der gesetzlichen Voraussetzungen insbesondere folgende Rechte:</p>
+          <ul>
+            <li>Auskunft (Art. 15 DSGVO)</li>
+            <li>Berichtigung (Art. 16 DSGVO)</li>
+            <li>Löschung (Art. 17 DSGVO)</li>
+            <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+            <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+            <li>Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21 DSGVO)</li>
+          </ul>
+          <p>Außerdem hast du das Recht, dich bei einer Datenschutzaufsichtsbehörde zu beschweren (Art. 77 DSGVO).</p>
+        </div>
+
+        <div class="content-card">
+          <h3>4. Website-Auslieferung und DNS</h3>
+          <p>
+            Die Website wird als statische Website bereitgestellt und über Cloudflare Pages ausgeliefert. Die Domain/DNS-Verwaltung erfolgt über Cloudflare.
+          </p>
+          <p>
+            Dabei können technisch erforderliche Verbindungsdaten (z. B. IP-Adresse, Datum/Uhrzeit, abgerufene Seite,
+            User-Agent, Referrer) verarbeitet werden, um die Website bereitzustellen und vor Missbrauch zu schützen.
+          </p>
+          <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>5. Server-Logfiles</h3>
+          <p>
+            Bei der Bereitstellung der Website und der angebundenen Dienste können Server-Logfiles anfallen. Diese werden
+            zur Sicherstellung des technischen Betriebs, zur Fehleranalyse und zur Abwehr von Angriffen verarbeitet.
+          </p>
+          <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>6. Webanalyse</h3>
+          <p>Zur statistischen Auswertung der Website-Nutzung nutze ich eine selbst gehostete Umami-Instanz.</p>
+          <p>Dabei werden Nutzungsdaten verarbeitet, um Reichweite und Nutzung der Website auszuwerten und die Website zu verbessern.</p>
+          <p>Sofern möglich, ist Umami so konfiguriert, dass keine Cookies gesetzt werden.</p>
+          <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+        </div>
+
+        <div class="content-card">
+          <h3>7. Anfrage-Bot</h3>
+          <p>Für die strukturierte Erhebung von Informationen nutze ich einen selbst gehosteten Anfrage-Bot (Typebot) (Einbettung und/oder Link).</p>
+          <p>Wenn du den Bot nutzt, werden deine Eingaben verarbeitet und gespeichert.</p>
+          <p>Die im Bot erfassten Daten werden zur Bearbeitung der Anfrage zusätzlich in meine selbst gehostete Kundendatenbank (NocoDB) übernommen.</p>
+          <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen / Vertragserfüllung).</p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>8. Kontaktaufnahme</h3>
+          <p>Wenn du mich kontaktierst (z. B. per E-Mail oder Telegram), verarbeite ich die von dir übermittelten Daten, um deine Anfrage zu beantworten und die Kommunikation zu führen.</p>
+          <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen/Vertrag) oder Art. 6 Abs. 1 lit. f DSGVO.</p>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>9. E-Mail und Telegram</h3>
+          <p>Für die E-Mail-Kommunikation nutze ich Zoho Mail.</p>
+          <p>Du kannst mich auch über Telegram kontaktieren. Bitte beachte, dass bei der Nutzung von Telegram auch eine Verarbeitung durch Telegram als eigener Dienstanbieter erfolgen kann.</p>
+        </div>
+
+        <div class="content-card">
+          <h3>10. Terminvereinbarung</h3>
+          <p>Für Terminvereinbarungen nutze ich meetergo.</p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>11. Videokonferenzen</h3>
+          <p>Für Online-Meetings nutze ich Zoom.</p>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>12. Zahlungsabwicklung</h3>
+          <p>Für die Abwicklung von Zahlungen nutze ich Stripe.</p>
+          <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.</p>
+        </div>
+
+        <div class="content-card">
+          <h3>13. Notion</h3>
+          <p>Für interne Projektdokumentation und Arbeitsorganisation nutze ich Notion.</p>
+          <p>Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.</p>
+        </div>
+
+        <div class="content-card card-dark">
+          <h3>14. Social Media</h3>
+          <p>Auf der Website können Links zu externen Social-Media-Profilen enthalten sein. Beim Anklicken verlässt du die Website.</p>
+        </div>
+
+        <div class="content-card card-cta">
+          <h3>15. Auftragsverarbeitung und Drittlandübermittlung</h3>
+          <p>Soweit ich Dienstleister als Auftragsverarbeiter einsetze, schließe ich erforderliche Auftragsverarbeitungsverträge ab.</p>
+          <p>Soweit Daten in Länder außerhalb der EU/des EWR übermittelt werden, erfolgt dies nur im Rahmen der gesetzlichen Vorgaben.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .content-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(1.5rem, 3vw, 2.5rem);
+      margin-top: 2rem;
+    }
+
+    :global(.content-card) {
+      border-radius: 8px;
+      padding-left: clamp(2.25rem, 5vw, 3.5rem) !important;
+      padding-right: clamp(2.25rem, 5vw, 3.5rem) !important;
+    }
+
+    .card-dark {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #F7F6F2;
+    }
+
+    .card-dark h3 {
+      color: #F7F6F2;
+    }
+
+    .card-dark p,
+    .card-dark ul,
+    .card-dark ol,
+    .card-dark li {
+      color: #b8b5d0;
+    }
+
+    .card-cta {
+      background: linear-gradient(135deg, rgba(16, 7, 70, 0.08) 0%, rgba(151, 131, 44, 0.06) 100%);
+      border-color: var(--divider);
+    }
+
+    @media (max-width: 900px) {
+      .content-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</PremiumSubpageLayout>
