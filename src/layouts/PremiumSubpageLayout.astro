@@ -243,7 +243,11 @@ const visibleNavItems = navItems.filter((item) => normalizePath(item.href) !== c
               <a href={item.href}>{item.label}</a>
             ))}
           </nav>
+<<<<<<< HEAD
           <a href="https://bot.mariowittmer.de/business-system-fit-v-3-4-1-r2vcd4e" class="nav-cta" target="_blank" rel="noopener noreferrer">Dein nächster Schritt</a>
+=======
+          <button class="nav-cta" id="open-bot-overlay" type="button">Dein nächster Schritt</button>
+>>>>>>> feature/website-update-2026-04-20
         </div>
       </div>
     </header>
@@ -265,4 +269,28 @@ const visibleNavItems = navItems.filter((item) => normalizePath(item.href) !== c
       </div>
     </footer>
   </body>
+<<<<<<< HEAD
+=======
+
+<div id="bot-overlay" style="display:none; position:fixed; z-index:9999; top:0; left:0; width:100vw; height:100vh; background:rgba(16,7,70,0.82); backdrop-filter:blur(2px); align-items:center; justify-content:center;">
+  <div style="position:relative; background:#2563eb; border-radius:18px; box-shadow:0 8px 32px rgba(16,7,70,0.18); padding:0; max-width:720px; width:95vw;">
+    <button id="close-bot-overlay" style="position:absolute; top:10px; right:18px; background:transparent; border:none; color:#fff; font-size:2rem; cursor:pointer; z-index:10;">&times;</button>
+    <iframe
+      src="https://bot.mariowittmer.de/human-system-fit"
+      style="background:#2563eb; border-radius:18px; width:100%; height:78vh; min-height:420px; max-height:820px; border:0; display:block;"
+      loading="lazy"
+    ></iframe>
+  </div>
+</div>
+<script>
+  const openBtn = document.getElementById('open-bot-overlay');
+  const overlay = document.getElementById('bot-overlay');
+  const closeBtn = document.getElementById('close-bot-overlay');
+  if(openBtn && overlay && closeBtn) {
+    openBtn.addEventListener('click', () => { overlay.style.display = 'flex'; });
+    closeBtn.addEventListener('click', () => { overlay.style.display = 'none'; });
+    overlay.addEventListener('click', (e) => { if(e.target === overlay) overlay.style.display = 'none'; });
+  }
+</script>
+>>>>>>> feature/website-update-2026-04-20
 </html>
