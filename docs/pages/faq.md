@@ -16,7 +16,7 @@ Entscheidungsfolgekosten sind die Kosten, die nach einer Entscheidung im Alltag 
 
 ### Ich weiß nicht, welches Angebot passt. Was mache ich?
 
-Dann startet der Besucher nicht mit einer Entscheidung, sondern mit einer Frage. Der Bot führt in den passenden Einstieg: Human-System-Fit für Solo-Selbständige oder §5 PflichtVorteil für Betriebe mit Mitarbeitenden.
+Dann startet der Besucher nicht mit einer Entscheidung, sondern mit einer kurzen Einordnung. So wird der passende Einstieg klar: Human-System-Fit für Solo-Selbständige oder §5 PflichtVorteil für Betriebe mit Mitarbeitenden.
 
 ### Welche Rolle spielt KI?
 
