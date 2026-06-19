@@ -213,3 +213,10 @@ Hinweise zur Integration:
 - CTA-Layout:
 	- Desktop: rechts neben dem Fliesstext
 	- Mobile: unter dem Fliesstext
+
+## Technischer Deploy-Stand (Stand 2026-06-19)
+
+- Produktion laeuft wieder ueber Branch `main`.
+- Die Website wird als statische Seite ausgerollt (ohne Astro-Runtime).
+- Build fuer Cloudflare Pages: `npm run build` erzeugt den Ordner `dist/` ueber `build-static.mjs`.
+- Backup-Stand bleibt in separaten Branches erhalten und wird nicht als Produktionswahrheit genutzt.

@@ -4,12 +4,12 @@
 
 Diese Seite verkauft **§5 PflichtVorteil** (Team / Betrieb).
 
-## Struktur (v2.0)
+## Struktur (v2.1)
 
 - Kurz-Hero + klarer Nutzen + §5-Realität (ohne Angstmarketing)
 - Verborgene Kosten / Reibungskosten
-- Was dich Wegsehen kostet
 - Rechtliche Realität
+- Was dich Wegsehen kostet
 - Vier Wege zu §5
 - Zwei Hebel. Ein Prozess.
 - Check in 3 Minuten
@@ -54,21 +54,7 @@ Wer mehr Aufträge in ein reibungsvolles System pumpt, erzeugt mehr Druck - kein
 
 ---
 
-## BLOCK 2: WAS DICH WEGSEHEN KOSTET
-
-**H2:** Reibung skaliert mit.
-
-Bei 5 Mitarbeitern und 15 Minuten Reibung täglich: **5.500 € jedes Jahr.** An einem einzigen Punkt. Konservativ gerechnet.
-
-Mehr Personal einstellen, um dasselbe rauszuholen? Kostet mehr. Mehr Aufträge ins gleiche System pumpen? Die Reibung skaliert mit.
-
-Und wenn die Gewerbeaufsicht klingelt - dann zählt jeder Tag ohne Dokumentation doppelt.
-
-Hinweis: Die notwendige Wirksamkeitsprüfung kann eigenständig durchgeführt - und auf Wunsch als inkludierter Bestandteil der Umsetzungsbegleitung der Maßnahmen oder auch separat gebucht werden.
-
----
-
-## BLOCK 3: DER RECHTLICHE DRUCK
+## BLOCK 2: DER RECHTLICHE DRUCK
 
 *Register A → C*
 
@@ -85,6 +71,20 @@ Das Bußgeld nach §25 Abs. 2 ArbSchG: **bis zu 30.000 €.** *(Quelle: gesetze-
 Bei einem Arbeitsunfall oder einer psychischen Erkrankung steht die fehlende Dokumentation als erstes im Fokus. Auftraggeber und öffentliche Ausschreibungen verlangen zunehmend den Nachweis.
 
 **Du hast kein Wissensproblem. Du hast ein Nachweisproblem. Und genau das löst der §5 PflichtVorteil.**
+
+---
+
+## BLOCK 3: WAS DICH WEGSEHEN KOSTET
+
+**H2:** Reibung skaliert mit.
+
+Bei 5 Mitarbeitern und 15 Minuten Reibung täglich: **5.500 € jedes Jahr.** An einem einzigen Punkt. Konservativ gerechnet.
+
+Mehr Personal einstellen, um dasselbe rauszuholen? Kostet mehr. Mehr Aufträge ins gleiche System pumpen? Die Reibung skaliert mit.
+
+Und wenn die Gewerbeaufsicht klingelt - dann zählt jeder Tag ohne Dokumentation doppelt.
+
+Hinweis: Die notwendige Wirksamkeitsprüfung kann eigenständig durchgeführt - und auf Wunsch als inkludierter Bestandteil der Umsetzungsbegleitung der Maßnahmen oder auch separat gebucht werden.
 
 ---
 
@@ -171,7 +171,13 @@ https://bot.mariowittmer.de/5-pflicht-vorteil-check-zu7kbqf
 - **Delegierbare Phase:** Unterlagen/Infos rein, Mitarbeiterbefragung läuft parallel
 - **Ergebnis-Termin (60-75 min):** Vollständigkeit prüfen + Verantwortlichen benennen + Maßnahmen festlegen + Wirksamkeitsprüfung terminieren
 
-**Wichtig:** Wir gestalten den Ablauf so, dass du als Unternehmer möglichst wenig bis gar nicht in deinem Tagesgeschäft beeinträchtigt bist. Du hast nur wenige feste Termine - alles andere ist delegierbar und läuft asynchron im Hintergrund.
+**Wichtig:** Der gesamte Prozess läuft online. Wir gestalten den Ablauf so, dass du als Unternehmer möglichst wenig bis gar nicht in deinem Tagesgeschäft beeinträchtigt bist. Du hast nur wenige feste Termine - alles andere ist delegierbar und läuft asynchron im Hintergrund.
+
+---
+
+## Konsistenz Navigation
+
+- Menübegriff auf der Seite: **§5 PflichtVorteil** (nicht nur PflichtVorteil)
 
 ---
 
