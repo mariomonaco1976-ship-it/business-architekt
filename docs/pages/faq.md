@@ -4,6 +4,11 @@ Stand: 2026-06-19
 
 Die FAQ spiegelt die aktuelle Seitenlogik: erst Klarheit, dann passender Einstieg, danach ggf. 2nd Step. Sie soll keine generischen Lexikonantworten liefern, sondern die Einwände und Unsicherheiten der Besucher vor dem nächsten Schritt klären.
 
+Hero-Setzung auf der Seite:
+
+- H1: Noch Fragen?
+- Kein zusätzlicher Lead-Text unter der H1
+
 ## Grundlagen
 
 ### Was ist Reibung?
