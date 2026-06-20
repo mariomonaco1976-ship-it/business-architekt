@@ -790,7 +790,9 @@ summary {
   }
 
   .think-row .button {
-    width: fit-content;
+    width: 100%;
+    white-space: normal;
+    text-align: center;
   }
 
   .card.span-3,
