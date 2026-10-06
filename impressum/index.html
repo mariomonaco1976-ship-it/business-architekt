@@ -6,9 +6,22 @@
     <title>Impressum | Mario Wittmer</title>
     <link rel="stylesheet" href="/assets/site.css" />
   </head>
-  <body>
-    <header class="site-header"><nav class="nav" aria-label="Hauptnavigation"><a class="brand" href="/"><img src="/assets/brand/logo_baum_schriftzug.png" alt="Mario Wittmer" /></a><button class="menu-button" data-menu-button aria-expanded="false" aria-label="Navigation öffnen">☰</button><div class="nav-links" data-nav-links><a href="/">Start</a><a href="/human-system-fit/">Human System Fit</a><a href="/pflichtvorteil/">§5 PflichtVorteil</a><a href="/warum-ich/">Warum ich</a><a href="/faq/">FAQ</a><a href="/realisation/">2nd Step</a></div></nav></header>
-    <main class="section legal">
+  <body data-current="">
+    <header class="site-header">
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <nav class="nav" aria-label="Hauptnavigation">
+    <a class="brand" href="/" aria-label="Mario Wittmer Startseite"><img src="/assets/brand/logo_baum_schriftzug.png" alt="Mario Wittmer" /></a>
+    <button class="menu-button" data-menu-button aria-expanded="false" aria-controls="main-navigation" aria-label="Navigation öffnen">☰</button>
+    <div class="nav-links" id="main-navigation" data-nav-links>
+      <a href="/" data-nav-link="start">Start</a>
+      <a href="/vorgehen/" data-nav-link="vorgehen">Vorgehen</a>
+      <a href="/ueber-mario/" data-nav-link="ueber-mario">Über Mario</a>
+      <a href="/kontakt/" data-nav-link="kontakt">Kontakt</a>
+      <a class="nav-cta" href="/#anfrage">Was ist dein Ziel?</a>
+    </div>
+  </nav>
+</header>
+    <main id="main" class="section legal">
       <p class="eyebrow">Rechtliches</p>
       <h1>Impressum</h1>
       <h2>Angaben gemäß § 5 DDG</h2>
@@ -22,7 +35,23 @@
       <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
       <p>Mario Wittmer<br />c/o Baumgartner<br />Kurbelwiesgasse 3<br />80939 München</p>
     </main>
-    <footer class="site-footer"><div class="footer-inner"><span>© Mario Wittmer</span><div class="footer-links"><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><a href="/agb/">AGB</a></div></div></footer>
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <strong>Mario Wittmer</strong>
+      <p>KI, Automatisierung und bessere Prozesse für kleine inhabergeführte Unternehmen.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer Navigation">
+      <a href="/">Start</a>
+      <a href="/vorgehen/">Vorgehen</a>
+      <a href="/ueber-mario/">Über Mario</a>
+      <a href="/kontakt/">Kontakt</a>
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+      <a href="/agb/">AGB</a>
+    </nav>
+  </div>
+</footer>
     <script src="/assets/site.js"></script>
   </body>
 </html>

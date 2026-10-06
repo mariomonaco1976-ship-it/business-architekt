@@ -4,26 +4,46 @@ import path from "node:path";
 const root = process.cwd();
 const outDir = path.join(root, "dist");
 
-const ignored = new Set([
-  ".git",
-  "dist",
-  "node_modules",
-  "tmp",
-]);
+// Sicherheitsprinzip: Der Build veröffentlicht nur explizit erlaubte öffentliche Artefakte.
+// Interne Specs, Planungsdokumente, README, lokale Skripte und sonstige Arbeitsdateien
+// dürfen nicht versehentlich in Cloudflare Pages landen.
+const publicEntries = [
+  "index.html",
+  "assets",
+  "human-system-fit",
+  "pflichtvorteil",
+  "kontakt",
+  "ueber-mario",
+  "vorgehen",
+  "faq",
+  "realisation",
+  "impressum",
+  "datenschutz",
+  "agb",
+  "robots.txt",
+  "sitemap.xml",
+  "_redirects",
+  "_headers",
+  "functions",
+];
 
 if (fs.existsSync(outDir)) {
-  fs.rmSync(outDir, { recursive: true, force: true });
+  // Windows kann den dist-Ordner selbst kurz sperren, wenn eine lokale Preview oder der Browser
+  // gerade daraus liest. Deshalb löschen wir den Inhalt, aber nicht den Ordner selbst.
+  for (const entry of fs.readdirSync(outDir)) {
+    fs.rmSync(path.join(outDir, entry), { recursive: true, force: true });
+  }
+} else {
+  fs.mkdirSync(outDir, { recursive: true });
 }
 
-fs.mkdirSync(outDir, { recursive: true });
-
-for (const entry of fs.readdirSync(root)) {
-  if (ignored.has(entry)) continue;
-
+for (const entry of publicEntries) {
   const sourcePath = path.join(root, entry);
-  const targetPath = path.join(outDir, entry);
+  if (!fs.existsSync(sourcePath)) continue;
 
+  const targetPath = path.join(outDir, entry);
   fs.cpSync(sourcePath, targetPath, { recursive: true });
 }
 
 console.log("Static build complete: dist/");
+console.log(`Published entries: ${publicEntries.filter((entry) => fs.existsSync(path.join(root, entry))).join(", ")}`);
