@@ -56,6 +56,18 @@ class PassOne(unittest.TestCase):
         self.assertIn('mailto:kontakt@mariowittmer.de', impressum)
         self.assertIn('mailto:kontakt@mariowittmer.de', datenschutz)
 
+    def test_stylesheet_cache_keys_and_revalidation(self):
+        for name in ('index.html', 'agb/index.html', 'datenschutz/index.html', 'impressum/index.html'):
+            text = (ROOT / name).read_text(encoding='utf-8')
+            css = re.search(r'<link rel="stylesheet" href="/assets/site\.css\?v=([^"]+)"', text)
+            js = re.search(r'<script src="/assets/site\.js\?v=([^"]+)"', text)
+            self.assertIsNotNone(css, name)
+            self.assertIsNotNone(js, name)
+            self.assertEqual(css.group(1), js.group(1), name)
+        headers = (ROOT / '_headers').read_text(encoding='utf-8')
+        for asset in ('site.css', 'site.js'):
+            self.assertRegex(headers, rf'/assets/{re.escape(asset)}\s+Cache-Control: public, max-age=0, must-revalidate')
+
     def test_public_output_and_links(self):
         dist = ROOT / 'dist'
         pages = sorted(p.relative_to(dist).as_posix() for p in dist.rglob('*.html'))
