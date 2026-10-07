@@ -10,13 +10,6 @@ const outDir = path.join(root, "dist");
 const publicEntries = [
   "index.html",
   "assets",
-  "human-system-fit",
-  "pflichtvorteil",
-  "kontakt",
-  "ueber-mario",
-  "vorgehen",
-  "faq",
-  "realisation",
   "impressum",
   "datenschutz",
   "agb",
@@ -24,7 +17,6 @@ const publicEntries = [
   "sitemap.xml",
   "_redirects",
   "_headers",
-  "functions",
 ];
 
 if (fs.existsSync(outDir)) {

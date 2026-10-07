@@ -1,4 +1,19 @@
 
+/* Locally hosted, unmodified fonts; SIL OFL licenses in assets/fonts/. */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/fonts/inter/variable.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Crimson Pro";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/assets/fonts/crimsonpro/variable.ttf") format("truetype");
+}
 :root {
   --color-brand: #100746;
   --color-brand-dark: #080322;
@@ -51,8 +66,9 @@ a { color: inherit; }
 
 .hero, .section { width: min(100% - 32px, var(--container)); margin: 0 auto; }
 .hero { padding: 118px 0 76px; }
-.hero-final { min-height: calc(100svh - 78px); display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(320px, .76fr); align-items: center; gap: clamp(42px, 6vw, 82px); }
+.hero-final { position: relative; isolation: isolate; width: 100%; min-height: max(680px, calc(100svh - 78px)); margin: 0; padding: clamp(52px, 7vw, 100px) max(24px, calc((100vw - var(--container)) / 2)); display: flex; align-items: center; background-image: linear-gradient(90deg, rgba(247,245,239,.72) 0%, rgba(247,245,239,.46) 42%, rgba(247,245,239,.04) 78%), url("/assets/Header%207.%20Oktober%202026.png"); background-size: cover; background-position: 68% center; background-repeat: no-repeat; }
 .hero-copy { max-width: 880px; }
+.hero-glass-card { width: min(100%, 700px); padding: clamp(28px, 4vw, 54px); border: 1px solid rgba(255,255,255,.66); border-radius: 30px; background: rgba(255,253,248,.86); box-shadow: 0 24px 72px rgba(16,7,70,.14); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
 .eyebrow, .section-kicker { margin: 0 0 14px; color: var(--color-accent); font-size: .76rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
 h1, h2, h3 { color: var(--color-brand); letter-spacing: -.055em; line-height: 1.02; }
 h1 { margin: 0; font-size: clamp(3rem, 6.8vw, 7.1rem); max-width: 1060px; }
@@ -62,8 +78,6 @@ p { margin: 0 0 1rem; }
 .lead { margin: 24px 0 0; color: var(--color-muted); font-size: clamp(1.08rem, 1.65vw, 1.27rem); max-width: 760px; }
 .microcopy { color: var(--color-muted); font-size: .96rem; margin-top: 14px; }
 .hero-actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; }
-.hero-portrait-card { position: relative; border-radius: 38px; padding: 16px; background: linear-gradient(145deg, rgba(255,253,248,.82), rgba(255,253,248,.42)); border: 1px solid var(--color-line); box-shadow: var(--shadow); }
-.hero-portrait-card img { border-radius: 28px; aspect-ratio: 4 / 5; object-fit: cover; }
 .hero-orbit { position: absolute; inset: auto 18px 18px 18px; display: flex; flex-wrap: wrap; gap: 8px; }
 .hero-orbit span { padding: 8px 12px; border-radius: 999px; background: rgba(255,253,248,.82); border: 1px solid var(--color-soft-line); color: var(--color-brand); font-weight: 850; font-size: .86rem; }
 .section { padding: 132px 0; }
@@ -130,7 +144,7 @@ blockquote { margin: 22px 0; padding: 22px 26px; border-left: 4px solid var(--co
 .about-section { width: min(100% - 32px, 1280px); }
 .about-grid { display: grid; grid-template-columns: minmax(280px, .8fr) minmax(0, 1.2fr); gap: clamp(36px, 6vw, 82px); align-items: start; }
 .about-portrait { position: sticky; top: 104px; }
-.about-portrait img { border-radius: 34px; box-shadow: var(--shadow); border: 1px solid var(--color-line); }
+.about-portrait img { width: 100%; height: auto; border-radius: 34px; box-shadow: var(--shadow); border: 1px solid var(--color-line); }
 .triad { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
 .triad span { border: 1px solid var(--color-soft-line); background: rgba(255,253,248,.78); border-radius: 999px; padding: 8px 12px; color: var(--color-brand); font-weight: 850; }
 .about-copy p { max-width: 760px; }
@@ -179,6 +193,7 @@ blockquote { margin: 22px 0; padding: 22px 26px; border-left: 4px solid var(--co
   .nav-links.is-open { display: flex; }
   .nav-links a { min-height: 44px; display: flex; align-items: center; }
   .hero { padding: 78px 0 52px; }
+  .hero-final { padding: clamp(36px, 6vw, 64px) 20px; background-position: 68% center; }
   .section { padding: 84px 0; }
   .system-visual { min-height: auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 18px; }
   .system-visual svg { display: none; }
@@ -189,7 +204,8 @@ blockquote { margin: 22px 0; padding: 22px 26px; border-left: 4px solid var(--co
 @media (max-width: 640px) {
   .brand img { width: 140px; }
   h1 { font-size: clamp(2.65rem, 13vw, 4.8rem); }
-  .hero-portrait-card { display: none; }
+  .hero-final { min-height: max(720px, calc(100svh - 78px)); padding: 30px 14px; background-position: 88% center; }
+  .hero-glass-card { width: 86%; padding: 25px 22px; border-radius: 24px; background: rgba(255,253,248,.82); }
   .bento-grid, .steps { grid-template-columns: 1fr; }
   .bento-large, .bento-tall { grid-column: auto; grid-row: auto; }
   .huge-word { font-size: clamp(4.8rem, 28vw, 8rem); }
@@ -200,3 +216,81 @@ blockquote { margin: 22px 0; padding: 22px 26px; border-left: 4px solid var(--co
   .reveal, .reveal:not(.is-visible) { opacity: 1; transform: none; }
   .cost-item, .cost-result, .cost-plus { opacity: 1; transform: none; }
 }
+
+/* Positioning pass 1: existing palette and layouts, targeted additions. */
+html { scroll-padding-top: 100px; }
+section[id], .anchor-alias { scroll-margin-top: 100px; }
+.hero-promise { margin: 24px 0 0; font-size: clamp(1.35rem, 2.2vw, 1.9rem); line-height: 1.3; color: var(--color-brand); font-weight: 650; letter-spacing: -.025em; }
+.hero-final h1 { font-size: clamp(3rem, 5.8vw, 5.7rem); }
+.hero-final .microcopy { max-width: 60ch; }
+.nav-cta { display: inline-flex; align-items: center; justify-content: center; }
+.button { font: inherit; font-weight: 850; }
+.button:disabled { cursor: not-allowed; background: var(--color-muted); box-shadow: none; }
+.button:disabled:hover { transform: none; }
+.system-illustration { padding: 12px; border: 1px solid var(--color-line); border-radius: 34px; background: var(--color-surface); box-shadow: var(--soft-shadow); }
+.system-illustration svg { display: block; width: 100%; height: auto; }
+.system-connections { stroke: var(--color-line); stroke-width: 2; }
+.system-labels rect { fill: var(--color-surface); stroke: var(--color-line); stroke-width: 1.5; }
+.system-labels text { fill: var(--color-brand); font-size: 21px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+.system-questions { margin: 24px 0; padding-left: 20px; border-left: 3px solid var(--color-accent); font-family: "Crimson Pro", Georgia, serif; font-size: clamp(1.6rem, 2.6vw, 2.4rem); line-height: 1.25; color: var(--color-brand); }
+.system-questions span { display: block; }
+.decision-panel { margin: 0; padding: clamp(28px, 6vw, 72px); }
+.decision-panel h2 { color: var(--color-surface); max-width: 940px; }
+.decision-list { list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+.decision-list li { padding: 18px 0; border-top: 1px solid rgba(255,253,248,.25); font-size: clamp(1.1rem, 1.7vw, 1.35rem); }
+.resource-line { font-family: "Crimson Pro", Georgia, serif; font-size: clamp(1.5rem, 2.6vw, 2.2rem); line-height: 1.3; color: var(--color-brand); margin: 24px 0; }
+.tea-section { position: relative; }
+.anchor-alias { position: absolute; top: 0; }
+.tea-card .tea-highlight { font-size: clamp(1.65rem, 3.5vw, 2.8rem); }
+.tea-card .lead { margin-bottom: 24px; }
+.booking-status { font-size: .92rem; color: var(--color-muted); max-width: 58ch; margin: 14px 0 0; }
+.legal { max-width: 920px; overflow-wrap: anywhere; }
+.legal h1 { font-size: clamp(2.25rem, 5vw, 4.5rem); }
+.legal h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); margin-top: 2.5rem; line-height: 1.15; }
+.footer-links { align-content: start; }
+.footer-inner > div { min-width: 0; }
+.footer-inner a { overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  .hero-final h1 { font-size: clamp(2.6rem, 11.5vw, 3.8rem); }
+  .decision-list { grid-template-columns: 1fr; }
+  .system-illustration { padding: 0; border-radius: 24px; }
+}
+@media (max-width: 900px) {
+  /* With no JS, navigation remains visible instead of an inert menu. */
+  .menu-button { display: none; }
+  .nav { flex-wrap: wrap; }
+  .nav-links { position: static; display: flex; width: 100%; box-shadow: none; margin-bottom: 12px; }
+  .js .nav { flex-wrap: nowrap; }
+  .js .menu-button { display: block; }
+  .js .nav-links { position: absolute; display: none; width: auto; margin-bottom: 0; }
+  .js .nav-links.is-open { display: flex; }
+}
+
+
+/* Compact tablet portraits and readable narrow-screen legal titles. */
+@media (min-width: 641px) and (max-width: 1020px) {
+  .about-portrait { width: min(100%, 320px); justify-self: center; }
+}
+@media (max-width: 400px) {
+  .legal h1 { font-size: 2rem; overflow-wrap: normal; }
+}
+
+/* Calculator: scoped to the existing system section. */
+.friction-calculator { margin-top: 48px; }
+.friction-calculator h3 { font-size: clamp(1.7rem, 3vw, 2.5rem); }
+.friction-calculator .calc-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 32px; margin-top: 28px; }
+.friction-calculator .calc-control { min-width: 0; margin-bottom: 22px; }
+.friction-calculator label { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; font-size: .95rem; font-weight: 650; margin-bottom: 8px; }
+.friction-calculator output { color: var(--color-brand); white-space: nowrap; }
+.friction-calculator input { width: 100%; min-height: 44px; font: inherit; accent-color: var(--color-brand); }
+.friction-calculator input[type="number"] { border: 1px solid var(--color-line); border-radius: 14px; padding: 10px 12px; background: var(--color-surface); color: var(--color-text); }
+.friction-calculator .calc-input-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.friction-calculator .calc-result { padding: 26px; border-radius: var(--radius); background: var(--color-brand); color: var(--color-surface); }
+.friction-calculator dl { margin: 0; }
+.friction-calculator dt { font-size: .9rem; }
+.friction-calculator dd { margin: 6px 0 24px; font-size: clamp(1.5rem, 2.8vw, 2.4rem); line-height: 1.2; font-weight: 750; overflow-wrap: anywhere; }
+.friction-calculator dd:last-child { margin-bottom: 0; }
+.friction-calculator .calc-error { color: var(--color-brand); font-size: .9rem; }
+.friction-calculator .calc-note { margin: 24px 0 0; color: var(--color-muted); font-size: .92rem; }
+@media (max-width: 800px) { .friction-calculator .calc-layout { grid-template-columns: 1fr; gap: 12px; } }
+@media (max-width: 400px) { .friction-calculator .calc-input-row { grid-template-columns: 1fr; gap: 0; } }
