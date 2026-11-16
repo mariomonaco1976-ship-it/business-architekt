@@ -1,9 +1,9 @@
 {
-  "name": "business-architekt",
-  "version": "0.1.0",
+  "name": "website-deploy-mario-wittmer-de",
   "private": true,
   "scripts": {
-    "build": "node build-static.mjs",
-    "preview": "node preview-server.js"
+    "preview": "node preview-server.cjs",
+    "test": "python tests/check.py && node tests/calculator.cjs",
+    "build": "npm run test && node build-static.mjs"
   }
 }

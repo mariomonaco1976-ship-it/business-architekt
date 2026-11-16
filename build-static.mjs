@@ -1,41 +1,8 @@
-import fs from "node:fs";
-import path from "node:path";
-
-const root = process.cwd();
-const outDir = path.join(root, "dist");
-
-// Sicherheitsprinzip: Der Build veröffentlicht nur explizit erlaubte öffentliche Artefakte.
-// Interne Specs, Planungsdokumente, README, lokale Skripte und sonstige Arbeitsdateien
-// dürfen nicht versehentlich in Cloudflare Pages landen.
-const publicEntries = [
-  "index.html",
-  "assets",
-  "impressum",
-  "datenschutz",
-  "agb",
-  "robots.txt",
-  "sitemap.xml",
-  "_redirects",
-  "_headers",
-];
-
-if (fs.existsSync(outDir)) {
-  // Windows kann den dist-Ordner selbst kurz sperren, wenn eine lokale Preview oder der Browser
-  // gerade daraus liest. Deshalb löschen wir den Inhalt, aber nicht den Ordner selbst.
-  for (const entry of fs.readdirSync(outDir)) {
-    fs.rmSync(path.join(outDir, entry), { recursive: true, force: true });
-  }
-} else {
-  fs.mkdirSync(outDir, { recursive: true });
-}
-
-for (const entry of publicEntries) {
-  const sourcePath = path.join(root, entry);
-  if (!fs.existsSync(sourcePath)) continue;
-
-  const targetPath = path.join(outDir, entry);
-  fs.cpSync(sourcePath, targetPath, { recursive: true });
-}
-
-console.log("Static build complete: dist/");
-console.log(`Published entries: ${publicEntries.filter((entry) => fs.existsSync(path.join(root, entry))).join(", ")}`);
+import fs from 'node:fs';
+import path from 'node:path';
+const source=path.resolve('public'),output=path.resolve('dist');
+// Never delete files. Refuse stale output instead of accidentally deploying it.
+function files(dir){return fs.existsSync(dir)?fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?files(path.join(dir,e.name)):[path.join(dir,e.name)]):[]}
+for(const file of files(output)){if(!fs.existsSync(path.join(source,path.relative(output,file))))throw Error('Unexpected output file: '+file)}
+fs.cpSync(source,output,{recursive:true});
+console.log('Static deployment artifact ready: dist/ (preview noindex retained)');
