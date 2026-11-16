@@ -4,6 +4,7 @@
   "scripts": {
     "preview": "node preview-server.cjs",
     "test": "python tests/check.py && node tests/calculator.cjs",
-    "build": "npm run test && node build-static.mjs"
+    "build": "npm run test && node build-static.mjs",
+    "build:production": "npm run test && node build-static.mjs --production"
   }
 }
