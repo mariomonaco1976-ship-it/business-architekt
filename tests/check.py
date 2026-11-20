@@ -18,7 +18,7 @@ assert len(pages)==4
 for p in pages:
  text=p.read_text(encoding='utf-8');doc=Page(text)
  assert len(doc.ids)==len(set(doc.ids)),p
- assert 'Menschlich. Wirksam. Mehr Wert.' in text,p
+ assert 'menschlich. wirksam. mehr wert.' in text,p
  assert 'Menschlich. Mehr Wert. Wirksam.' not in text,p
  assert 'https://cal.eu/business-architekt/tea-time' in doc.links,p
  for link in doc.links:
